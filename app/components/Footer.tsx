@@ -19,7 +19,12 @@ const Footer: React.FC = () => {
                 key={soc}
                 className="relative w-[34px] h-[34px] mr-12 last:mr-0 cursor-pointer hover:scale-105"
               >
-                <Image src={soc} fill={true} alt={soc.replace(".png", "")} />
+                <Image
+                  src={soc}
+                  fill={true}
+                  alt={soc.replace(".png", "")}
+                  sizes="34px"
+                />
               </span>
             ))}
           </div>
@@ -32,6 +37,7 @@ const Footer: React.FC = () => {
                   src={pay}
                   fill={true}
                   alt={pay.replace(".webp", "")}
+                  sizes="32px"
                 />
               </span>
             ))}
@@ -80,7 +86,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-text-100 px-4 md:px-8 lg:px-16">
+      <div className="bg-text-200 px-4 md:px-8 lg:px-16">
         <div className="max-w-[1400px] mx-auto h-[50px] flex items-center justify-between">
           <span className="text-sm">
             &#169; {new Date().getFullYear()} ASOS

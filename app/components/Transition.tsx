@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, ReactNode } from "react";
+import React, { useRef, ReactNode } from "react";
 import { CSSTransition } from "react-transition-group";
 
 interface Props {

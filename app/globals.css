@@ -16,6 +16,7 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  /* background-color: #27252526; */
 }
 
 * {
@@ -40,6 +41,8 @@ p {
     color-scheme: dark;
   }
 } */
+
+/* css transtions starts here */
 
 .alert-enter {
   opacity: 0;
@@ -76,6 +79,23 @@ p {
   transform: translateX(600px);
   transition: opacity 300ms, transform 300ms;
 }
+
+.move-in-enter {
+  transform: translateX(-100vw);
+}
+.move-in-enter-active {
+  transform: translateX(0);
+  transition: transform 400ms ease-in-out;
+}
+.move-in-exit {
+  transform: translateX(0);
+}
+.move-in-exit-active {
+  transform: translateX(-100vw);
+  transition: transform 400ms ease-in-out;
+}
+
+/* css transtions ends here */
 
 .dark-icon path {
   stroke: black;

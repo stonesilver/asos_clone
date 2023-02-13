@@ -9,11 +9,14 @@ import HeartIcon from "../../public/icons/heart.svg";
 import CartIcon from "../../public/icons/cart.svg";
 import UserIcon from "../../public/icons/user.svg";
 import UserDropdown from "./UserDropdown";
+import MobileMenu from "./MobileMenu";
 
 const Header: React.FC = () => {
   const [searchInput, setSearchInput] = React.useState<string>("");
   const [show, setShow] = React.useState<boolean>(false);
-  const [showMobileSearch, setShowMobileSearch] = React.useState<boolean>(true);
+  const [showMobileSearch, setShowMobileSearch] =
+    React.useState<boolean>(false);
+  const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
   const [showMenu, setShowMenu] = React.useState<boolean>(false);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -22,6 +25,14 @@ const Header: React.FC = () => {
 
   const handleFocus = () => {
     setShow((prevS) => !prevS);
+  };
+
+  const closeMobileMenu = () => {
+    setShowMobileMenu(false);
+  };
+
+  const openMobileMenu = () => {
+    setShowMobileMenu(true);
   };
 
   return (
@@ -55,6 +66,8 @@ const Header: React.FC = () => {
         </div>
       )}
 
+      <MobileMenu show={showMobileMenu} close={closeMobileMenu} />
+
       <div className="bg-white hidden px-4 md:px-8 lg:px-16 lg:block">
         <ul className="flex justify-end items-center h-30 w-full max-w-[1400px] mx-auto">
           <li className="px-4 border-l border-muted-200 h-full flex items-center">
@@ -80,6 +93,7 @@ const Header: React.FC = () => {
               src="./icons/hamburger.svg"
               alt=""
               className="lg:hidden block mr-4"
+              onClick={openMobileMenu}
             />
 
             <Link href="/" className="flex items-center h-full">
