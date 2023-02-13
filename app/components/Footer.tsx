@@ -53,7 +53,9 @@ const Footer: React.FC = () => {
 
       <div className="bg-text-100 px-4 md:px-8 lg:px-16">
         <div className="max-w-[1400px] mx-auto h-[50px] flex items-center justify-between">
-          <span className="text-sm">&#169; 2023 ASOS</span>
+          <span className="text-sm">
+            &#169; {new Date().getFullYear()} ASOS
+          </span>
           <div className="flex text-sm font-medium">
             <span className="border-r border-text-400 pr-2">
               Privacy & Cookies

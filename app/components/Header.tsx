@@ -5,7 +5,6 @@ import React from "react";
 import Input from "./Input";
 import { ChangeEvent } from "react";
 import SearchIcon from "../../public/icons/search.svg";
-import SearchWhiteIcon from "../../public/icons/search-white.svg";
 import HeartIcon from "../../public/icons/heart.svg";
 import CartIcon from "../../public/icons/cart.svg";
 import UserIcon from "../../public/icons/user.svg";
@@ -88,22 +87,22 @@ const Header: React.FC = () => {
               placeholder=" Search for items and brands"
               handleChange={handleChange}
               handleFocus={handleFocus}
-              rightIcon={<SearchIcon className="w-8 h-8" />}
+              rightIcon={<SearchIcon className="w-5 h-5" />}
               customStyles="rounded-3xl z-90 h-[35px]"
             />
           </div>
 
           <div className="flex items-center">
-            <SearchWhiteIcon className="w-8 h-8 md:w-9 md:h-9 mr-3 md:hidden" />
+            <SearchIcon className="w-6 h-6 mr-5 md:mr-3 md:hidden fill-current" />
             <div className="relative flex justify-center">
               <UserIcon
-                className="w-8 h-8 md:w-9 md:h-9 mr-3 cursor-pointer"
+                className="w-6 h-6 mr-5 md:mr-3 cursor-pointer"
                 onClick={() => setShowMenu(true)}
               />
               <UserDropdown enter={showMenu} setShowMenu={setShowMenu} />
             </div>
-            <HeartIcon className="w-8 h-8 md:w-9 md:h-9 mr-3 cursor-pointer" />
-            <CartIcon className="w-8 h-8 md:w-9 md:h-9 cursor-pointer" />
+            <HeartIcon className="w-7 h-7 mr-5 md:mr-3 cursor-pointer" />
+            <CartIcon className="w-6 h-6 cursor-pointer" />
           </div>
         </div>
       </nav>
