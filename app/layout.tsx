@@ -2,6 +2,7 @@ import "./globals.css";
 import Link from "next/link";
 import localFont from "@next/font/local";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const FuturaPt = localFont({
   src: [
@@ -60,13 +61,9 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
         <Header />
 
-        <main className="w-full flex-1 max-w-[1400px] mx-auto">
-          {children}
-        </main>
+        <main className="w-full flex-1 max-w-[1400px] mx-auto">{children}</main>
 
-        <footer className="border border-white flex justify-center items-center text-3xl h-24">
-          Footer
-        </footer>
+        <Footer />
       </body>
     </html>
   );

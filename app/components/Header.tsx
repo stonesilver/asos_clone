@@ -94,22 +94,22 @@ const Header: React.FC = () => {
           </div>
 
           <div className="flex items-center">
-            <SearchWhiteIcon className="w-9 h-9 mr-3 md:hidden" />
+            <SearchWhiteIcon className="w-8 h-8 md:w-9 md:h-9 mr-3 md:hidden" />
             <div className="relative flex justify-center">
               <UserIcon
-                className="w-9 h-9 mr-3 cursor-pointer"
+                className="w-8 h-8 md:w-9 md:h-9 mr-3 cursor-pointer"
                 onClick={() => setShowMenu(true)}
               />
               <UserDropdown enter={showMenu} setShowMenu={setShowMenu} />
             </div>
-            <HeartIcon className="w-9 h-9 mr-3 cursor-pointer" />
-            <CartIcon className="w-9 h-9 cursor-pointer" />
+            <HeartIcon className="w-8 h-8 md:w-9 md:h-9 mr-3 cursor-pointer" />
+            <CartIcon className="w-8 h-8 md:w-9 md:h-9 cursor-pointer" />
           </div>
         </div>
       </nav>
 
       <div className="w-full h-[50px] bg-[#ccff00] hidden md:block">
-        <div className="max-w-[1400] h-full mx-auto flex justify-between items-center text-black text-lg font-semibold px-4 md:px-8 lg:px-16">
+        <div className="max-w-[1400px] h-full mx-auto flex justify-between items-center text-black text-lg font-semibold px-4 md:px-8 lg:px-16">
           <Link href="/" className="w-32 text-center border-2 border-black">
             Women
           </Link>
