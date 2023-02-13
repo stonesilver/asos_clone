@@ -1,13 +1,42 @@
 import React from "react";
 import Link from "next/link";
-import { footerLinks } from "./assets/data";
+import Image from "next/image";
+import {
+  footerLinks,
+  footerPayments,
+  footerSocialHandles,
+} from "./assets/data";
 import { FooterChildrenProps } from "./assets/data.types";
 
 const Footer: React.FC = () => {
   return (
     <div className="w-full">
       <div className="h-[61px] bg-white w-full hidden md:block px-4 md:px-8 lg:px-16">
-        <div className="max-w-[1400px] mx-auto"></div>
+        <div className="max-w-[1400px] mx-auto flex items-center justify-center h-full border">
+          <div className="flex items-center h-full">
+            {footerSocialHandles.map((soc) => (
+              <span
+                key={soc}
+                className="relative w-[34px] h-[34px] mr-12 last:mr-0 cursor-pointer hover:scale-105"
+              >
+                <Image src={soc} fill={true} alt={soc.replace(".png", "")} />
+              </span>
+            ))}
+          </div>
+          <span className="mx-8">|</span>
+          <div className="flex items-center">
+            {footerPayments.map((pay) => (
+              <span key={pay} className="relative w-8 h-5 mr-12 last:mr-0">
+                <Image
+                  key={pay}
+                  src={pay}
+                  fill={true}
+                  alt={pay.replace(".webp", "")}
+                />
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className="bg-text-50 px-4 md:px-8 lg:px-16 hidden md:block">

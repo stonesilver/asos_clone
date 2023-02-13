@@ -74,3 +74,17 @@ export const footerLinks: FooterProps[] = [
     location: true,
   },
 ];
+
+export const footerSocialHandles: string[] = [
+  "/icons/facebook.svg",
+  "/icons/instagram.svg",
+  "/icons/snapchat.svg",
+];
+
+export const footerPayments: string[] = [
+  "/images/visa-png.webp",
+  "/images/mastercard-png.webp",
+  "/images/pay-pal-png.webp",
+  "/images/american-express-png.webp",
+  "/images/visa-electron-png.webp",
+];
