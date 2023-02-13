@@ -61,7 +61,7 @@ const Header: React.FC = () => {
             />
 
             <Link href="/" className="flex items-center h-full">
-              <span className="text-2xl md:text-5xl md:pr-4 font-bold mt-[-5px] md:mt-[-10px]">
+              <span className="text-3xl md:text-5xl md:pr-4 font-bold mt-[-5px] md:mt-[-10px]">
                 asos
               </span>
             </Link>
@@ -94,16 +94,16 @@ const Header: React.FC = () => {
           </div>
 
           <div className="flex items-center">
-            <SearchWhiteIcon className="w-10 h-10 mr-3 md:hidden" />
+            <SearchWhiteIcon className="w-9 h-9 mr-3 md:hidden" />
             <div className="relative flex justify-center">
               <UserIcon
-                className="w-10 h-10 mr-3 cursor-pointer"
+                className="w-9 h-9 mr-3 cursor-pointer"
                 onClick={() => setShowMenu(true)}
               />
               <UserDropdown enter={showMenu} setShowMenu={setShowMenu} />
             </div>
-            <HeartIcon className="w-10 h-10 mr-3 cursor-pointer" />
-            <CartIcon className="w-10 h-10 cursor-pointer" />
+            <HeartIcon className="w-9 h-9 mr-3 cursor-pointer" />
+            <CartIcon className="w-9 h-9 cursor-pointer" />
           </div>
         </div>
       </nav>
