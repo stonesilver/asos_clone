@@ -29,6 +29,12 @@ a {
   text-decoration: none;
 }
 
+p {
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+}
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -50,6 +56,25 @@ a {
 .alert-exit-active {
   opacity: 0;
   transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.translate-down-enter {
+  opacity: 0;
+  transform: translateY(70px);
+}
+.translate-down-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.translate-down-exit {
+  transform: translateY(0);
+  opacity: 1;
+}
+.translate-down-exit-active {
+  opacity: 0;
+  transform: translateX(70px);
   transition: opacity 300ms, transform 300ms;
 }
 

@@ -58,12 +58,12 @@ export default function RootLayout({
       */}
       <head />
       <body className="min-h-screen flex flex-col">
-        <header className="">
-          <Header />
-        </header>
-        <main className="w-full flex-1 max-w-[1400px] mx-auto border px-4">
+        <Header />
+
+        <main className="w-full flex-1 max-w-[1400px] mx-auto px-4">
           {children}
         </main>
+
         <footer className="border border-white flex justify-center items-center text-3xl h-24">
           Footer
         </footer>
