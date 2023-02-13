@@ -1,5 +1,4 @@
 import Link from "next/link";
-// import Transition from "./components/Transition";
 
 const Home: React.FC = () => {
   return (

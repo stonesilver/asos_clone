@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useRef } from "react";
+import React from "react";
 import Link from "next/link";
 import BoxIcon from "../../public/icons/box.svg";
 import QuestionIcon from "../../public/icons/question-circle.svg";
 import ChatIcon from "../../public/icons/chat.svg";
 import UserIcon from "../../public/icons/user.svg";
-import { CSSTransition } from "react-transition-group";
+import Transition from "./Transition";
 
 interface Props {
   enter: boolean;
@@ -14,20 +14,9 @@ interface Props {
 }
 
 const UserDropdown: React.FC<Props> = ({ enter, setShowMenu }) => {
-  const ref = useRef(null);
-
   return (
-    <CSSTransition
-      in={enter}
-      nodeRef={ref}
-      timeout={300}
-      classNames="translate-down"
-      unmountOnExit
-    >
-      <div
-        ref={ref}
-        className="absolute top-14 shadow-lg min-w-[22rem] right-[-6rem] rounded-lg bg-white min-h-64 text-black"
-      >
+    <Transition show={enter} name="translate-down">
+      <div className="absolute top-14 shadow-lg min-w-[22rem] right-[-6rem] rounded-lg bg-white min-h-64 text-black">
         <div className="flex justify-between bg-text-100 p-4">
           <div className="">
             <Link
@@ -55,7 +44,7 @@ const UserDropdown: React.FC<Props> = ({ enter, setShowMenu }) => {
             href="/"
             className="flex items-center px-4 py-2 hover:bg-text-50"
           >
-            <UserIcon className="w-8 h-8 mr-3 cursor-pointer dark-icon" />
+            <UserIcon className="w-6 h-6 mr-3 cursor-pointer" />
             <p className="text-lg">My Account</p>
           </Link>
 
@@ -63,7 +52,7 @@ const UserDropdown: React.FC<Props> = ({ enter, setShowMenu }) => {
             href="/"
             className="flex items-center px-4 py-2 hover:bg-text-50"
           >
-            <BoxIcon className="w-8 h-8 mr-3 cursor-pointer dark-icon" />
+            <BoxIcon className="w-6 h-6 mr-3 cursor-pointer dark-icon" />
             <p className="text-lg">My Orders</p>
           </Link>
 
@@ -71,7 +60,7 @@ const UserDropdown: React.FC<Props> = ({ enter, setShowMenu }) => {
             href="/"
             className="flex items-center px-4 py-2 hover:bg-text-50"
           >
-            <QuestionIcon className="w-8 h-8 mr-3 cursor-pointer dark-icon" />
+            <QuestionIcon className="w-6 h-6 mr-3 cursor-pointer dark-icon" />
             <p className="text-lg">Returns Information</p>
           </Link>
 
@@ -79,12 +68,12 @@ const UserDropdown: React.FC<Props> = ({ enter, setShowMenu }) => {
             href="/"
             className="flex items-center px-4 py-2 hover:bg-text-50"
           >
-            <ChatIcon className="w-8 h-8 mr-3 cursor-pointer dark-icon" />
+            <ChatIcon className="w-6 h-6 mr-3 cursor-pointer dark-icon" />
             <p className="text-lg">Contact Preferences</p>
           </Link>
         </div>
       </div>
-    </CSSTransition>
+    </Transition>
   );
 };
 

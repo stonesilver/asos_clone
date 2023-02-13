@@ -13,6 +13,7 @@ import UserDropdown from "./UserDropdown";
 const Header: React.FC = () => {
   const [searchInput, setSearchInput] = React.useState<string>("");
   const [show, setShow] = React.useState<boolean>(false);
+  const [showMobileSearch, setShowMobileSearch] = React.useState<boolean>(true);
   const [showMenu, setShowMenu] = React.useState<boolean>(false);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -30,6 +31,28 @@ const Header: React.FC = () => {
           onClick={handleFocus}
           className="fixed top-0 bg-black opacity-50 w-screen h-screen"
         />
+      )}
+
+      {showMobileSearch && (
+        <div className="fixed h-screen w-screen bg-white p-4">
+          <div className="w-full flex justify-end mb-2">
+            <button
+              className="py-1 px-4 text-2xl font-extrabold"
+              onClick={() => setShowMobileSearch(false)}
+            >
+              &#10005;
+            </button>
+          </div>
+          <Input
+            value={searchInput}
+            type="search"
+            placeholder=" Search for items and brands"
+            handleChange={handleChange}
+            handleFocus={handleFocus}
+            rightIcon={<SearchIcon className="w-5 h-5" />}
+            customStyles="rounded-3xl z-90 h-[35px] border border-amber-500"
+          />
+        </div>
       )}
 
       <div className="bg-white hidden px-4 md:px-8 lg:px-16 lg:block">
@@ -93,15 +116,21 @@ const Header: React.FC = () => {
           </div>
 
           <div className="flex items-center">
-            <SearchIcon className="w-6 h-6 mr-5 md:mr-3 md:hidden fill-current" />
+            <SearchIcon
+              className="w-6 h-6 mr-5 md:mr-7 md:hidden fill-current"
+              onClick={() => setShowMobileSearch(true)}
+            />
+
             <div className="relative flex justify-center">
               <UserIcon
-                className="w-6 h-6 mr-5 md:mr-3 cursor-pointer"
+                className="w-6 h-6 mr-5 md:mr-7 cursor-pointer"
                 onClick={() => setShowMenu(true)}
               />
               <UserDropdown enter={showMenu} setShowMenu={setShowMenu} />
             </div>
-            <HeartIcon className="w-7 h-7 mr-5 md:mr-3 cursor-pointer" />
+
+            <HeartIcon className="w-7 h-7 mr-5 md:mr-7 cursor-pointer" />
+
             <CartIcon className="w-6 h-6 cursor-pointer" />
           </div>
         </div>
@@ -109,14 +138,16 @@ const Header: React.FC = () => {
 
       <div className="w-full h-[50px] bg-[#ccff00] hidden md:block">
         <div className="max-w-[1400px] h-full mx-auto flex justify-between items-center text-black text-lg font-semibold px-4 md:px-8 lg:px-16">
-          <Link href="/" className="w-32 text-center border-2 border-black">
+          <Link href="/" className="w-28 text-center border-2 border-black">
             Women
           </Link>
+
           <div className="flex-1 text-center text-base font-semibold">
             <p className="tracking-widest">UP TO 50% OFF YOUR FAVES</p>
             <p className="tracking-widest">LIKE SAVINGS! YOU'LL LOVE THIS</p>
           </div>
-          <Link href="/" className="w-32 text-center border-2 border-black">
+
+          <Link href="/" className="w-28 text-center border-2 border-black">
             Men
           </Link>
         </div>

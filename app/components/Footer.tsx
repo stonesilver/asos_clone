@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
   return (
     <div className="w-full">
       <div className="h-[61px] bg-white w-full hidden md:block px-4 md:px-8 lg:px-16">
-        <div className="max-w-[1400px] mx-auto flex items-center justify-center h-full border">
+        <div className="max-w-[1400px] mx-auto flex items-center justify-center h-full">
           <div className="flex items-center h-full">
             {footerSocialHandles.map((soc) => (
               <span
