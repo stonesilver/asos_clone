@@ -8,3 +8,19 @@ export interface FooterProps {
   children: FooterChildrenProps[];
   location?: boolean;
 }
+
+export interface MobileMenuProps {
+  title: string;
+  color?: boolean;
+  desc?: string;
+  bgImg?: string;
+  bgColor?: string;
+  height: string;
+  top?: boolean;
+}
+
+export interface UserProps {
+  title: string;
+  href: string;
+  icon: string;
+}

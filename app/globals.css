@@ -30,10 +30,11 @@ a {
   text-decoration: none;
 }
 
-p {
+p,
+span {
   padding: 0;
   margin: 0;
-  line-height: normal;
+  line-height: normal !important;
 }
 
 /* @media (prefers-color-scheme: dark) {

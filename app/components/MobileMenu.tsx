@@ -1,6 +1,17 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
+import {
+  womenMobileMenuData,
+  menMobileMenuData,
+  footerLinks,
+} from "./assets/data";
+import Link from "next/link";
+import BoxIcon from "../../public/icons/box.svg";
+import QuestionIcon from "../../public/icons/question-circle.svg";
+import ChatIcon from "../../public/icons/chat.svg";
+import UserIcon from "../../public/icons/user.svg";
 import Transition from "./Transition";
 
 interface Props {
@@ -9,16 +20,163 @@ interface Props {
 }
 
 const MobileMenu: React.FC<Props> = ({ show, close }) => {
+  const [activeTab, setActiveTab] = React.useState<string>("women");
+
+  const switchTab: (tab: string) => void = (tab) => {
+    setActiveTab(tab);
+  };
+
+  const activeData =
+    activeTab === "women" ? womenMobileMenuData : menMobileMenuData;
+
   return (
     <Transition name="move-in" show={show}>
       <div className="fixed top-0 w-screen h-screen bg-[#27252526] z-50 lg:hidden">
-        <div className="bg-white max-w-[320px] h-screen relative">
+        <div className="bg-white max-w-[320px] h-screen relative overflow-y-auto">
           <span
-            className="absolute top-0 right-[-53px] text-white bg-primary font-extrabold text-4xl px-4 py-2"
+            className="fixed top-0 left-[320px] text-white z-50 bg-primary font-extrabold text-4xl px-4 py-2"
             onClick={close}
           >
             &#10005;
           </span>
+
+          {/* Tab switch */}
+          <div className="h-[50px] flex items-center text-text-200 sticky top-0 bg-white">
+            {["women", "men"].map((itm) => (
+              <button
+                key={itm}
+                className={`flex-1 text-lg tracking-wider font-semibold h-full uppercase ${
+                  activeTab === itm
+                    ? "border-b-2 border-black text-black"
+                    : "border-b text-text-400"
+                }`}
+                onClick={() => switchTab(itm)}
+              >
+                {itm}
+              </button>
+            ))}
+          </div>
+
+          {/* content */}
+          <ul className="p-4">
+            {activeData.map(
+              ({ title, desc, bgColor, bgImg, height, color, top }) => (
+                <li
+                  key={title}
+                  className={`${height === "big" ? "h-[96px]" : "h-14"} ${
+                    top ? "text-center" : "flex flex-col justify-center"
+                  } px-4  ${
+                    bgImg
+                      ? "bg-text-100 bg-contain bg-right bg-no-repeat"
+                      : bgColor
+                  } mb-4`}
+                  style={{ backgroundImage: bgImg && `url('${bgImg}')` }}
+                >
+                  <span
+                    className={`${
+                      top ? "text-6xl" : "text-lg"
+                    } font-semibold tracking-wider uppercase ${
+                      color ? "text-white" : "text-black"
+                    } w-1/2`}
+                  >
+                    {title}
+                  </span>
+                  {desc && (
+                    <span className="uppercase text-xl font-light tracking-wider w-1/2">
+                      {desc}
+                    </span>
+                  )}
+                </li>
+              )
+            )}
+            <li className="flex items-stretch">
+              <span className="flex-1 border mr-4 px-2">
+                <img
+                  src="/images/women_13.webp"
+                  alt=""
+                  className="object-contain"
+                />
+
+                <p className="uppercase text-sm font-semibold text-center tracking-wider">
+                  gift vouchers
+                </p>
+              </span>
+              <span className="flex-1 border px-2">
+                <img
+                  src="/images/women_14.webp"
+                  alt=""
+                  className="object-contain"
+                />
+
+                <p className="uppercase text-sm font-semibold text-center tracking-wider">
+                  download the app
+                </p>
+              </span>
+            </li>
+          </ul>
+
+          <div className="bg-text-100 border">
+            <div className="bg-white h-[60px] mt-6 flex items-center justify-evenly">
+              {[
+                "/icons/facebook.svg",
+                "/icons/instagram.svg",
+                "/icons/snapchat.svg",
+              ].map((social, idx) => (
+                <span key={idx} className="relative w-[34px] h-[34px]">
+                  <Image src={social} alt="social" fill={true} sizes="34px" />
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-6">
+              <ul className="flex items-center px-4">
+                <li className="underline text-xl">Sign in</li>
+                <li className="mx-2">|</li>
+                <li className="underline text-xl">Join</li>
+              </ul>
+
+              <div className="mt-6 bg-white px-4 py-3">
+                <Link
+                  href="/"
+                  className="flex items-center px-4 py-3 hover:bg-text-50"
+                >
+                  <span className="relative w-6 h-6 cursor-pointer mr-3">
+                    <Image
+                      src="/icons/user.svg"
+                      alt="user"
+                      fill={true}
+                      sizes="24px"
+                    />
+                  </span>
+                  <p className="text-lg">My Account</p>
+                </Link>
+
+                <Link
+                  href="/"
+                  className="flex items-center px-4 py-3 hover:bg-text-50"
+                >
+                  <BoxIcon className="w-6 h-6 mr-3 cursor-pointer dark-icon" />
+                  <p className="text-lg">My Orders</p>
+                </Link>
+
+                <Link
+                  href="/"
+                  className="flex items-center px-4 py-3 hover:bg-text-50"
+                >
+                  <QuestionIcon className="w-6 h-6 mr-3 cursor-pointer dark-icon" />
+                  <p className="text-lg">Returns Information</p>
+                </Link>
+
+                <Link
+                  href="/"
+                  className="flex items-center px-4 py-3 hover:bg-text-50"
+                >
+                  <ChatIcon className="w-6 h-6 mr-3 cursor-pointer dark-icon" />
+                  <p className="text-lg">Contact Preferences</p>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </Transition>
