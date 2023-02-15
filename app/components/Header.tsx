@@ -10,6 +10,9 @@ import CartIcon from "../../public/icons/cart.svg";
 import UserIcon from "../../public/icons/user.svg";
 import UserDropdown from "./UserDropdown";
 import MobileMenu from "./MobileMenu";
+import Container from "./Container";
+import { desktopMenuData } from "./assets/data";
+import { usePathname } from "next/navigation";
 
 const Header: React.FC = () => {
   const [searchInput, setSearchInput] = React.useState<string>("");
@@ -18,6 +21,7 @@ const Header: React.FC = () => {
     React.useState<boolean>(false);
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
   const [showMenu, setShowMenu] = React.useState<boolean>(false);
+  const pathname = usePathname();
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchInput(event.target.value);
@@ -59,7 +63,7 @@ const Header: React.FC = () => {
             type="search"
             placeholder=" Search for items and brands"
             handleChange={handleChange}
-            handleFocus={handleFocus}
+            // handleFocus={handleFocus}
             rightIcon={<SearchIcon className="w-5 h-5" />}
             customStyles="rounded-3xl z-90 h-[35px] border border-amber-500"
           />
@@ -104,13 +108,17 @@ const Header: React.FC = () => {
             <div className="items-center hidden lg:flex h-full">
               <Link
                 href="/women"
-                className=" flex items-center justify-center text-xl text-bold w-[100px] h-full border-l border-text-500 hover:bg-text-500"
+                className={`flex items-center justify-center ${
+                  pathname?.includes("/women") && "bg-text-500"
+                } text-xl text-bold w-[100px] h-full border-l border-text-500 hover:bg-text-500`}
               >
                 Women
               </Link>
               <Link
                 href="/men"
-                className=" flex items-center justify-center text-xl text-bold w-[100px] h-full border-x border-text-500 hover:bg-text-500"
+                className={`flex items-center justify-center ${
+                  pathname?.includes("/men") && "bg-text-500"
+                } text-xl text-bold w-[100px] h-full border-x border-text-500 hover:bg-text-500`}
               >
                 Men
               </Link>
@@ -150,21 +158,19 @@ const Header: React.FC = () => {
         </div>
       </nav>
 
-      <div className="w-full h-[50px] bg-[#ccff00] hidden md:block">
-        <div className="max-w-[1400px] h-full mx-auto flex justify-between items-center text-black text-lg font-semibold px-4 md:px-8 lg:px-16">
-          <Link href="/" className="w-28 text-center border-2 border-black">
-            Women
-          </Link>
-
-          <div className="flex-1 text-center text-base font-semibold">
-            <p className="tracking-widest">UP TO 50% OFF YOUR FAVES</p>
-            <p className="tracking-widest">LIKE SAVINGS! YOU'LL LOVE THIS</p>
-          </div>
-
-          <Link href="/" className="w-28 text-center border-2 border-black">
-            Men
-          </Link>
-        </div>
+      <div className="h-[50px] bg-text-500 hidden lg:block">
+        <Container>
+          <ul className="flex h-full">
+            {desktopMenuData.map(({ title }) => (
+              <li
+                key={title}
+                className="flex items-center justify-center transition-all px-4 text-white text-base h-full hover:bg-white hover:text-black"
+              >
+                {title}
+              </li>
+            ))}
+          </ul>
+        </Container>
       </div>
     </header>
   );

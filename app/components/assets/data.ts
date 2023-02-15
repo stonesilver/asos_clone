@@ -3,6 +3,7 @@ import {
   MobileMenuProps,
   UserProps,
   AUthProps,
+  DesktopMenuProps,
 } from "./data.types";
 
 export const footerLinks: FooterProps[] = [
@@ -282,5 +283,52 @@ export const userAuth: AUthProps[] = [
   {
     title: "Join",
     href: "/",
+  },
+];
+
+export const desktopMenuData: DesktopMenuProps[] = [
+  {
+    title: "New In",
+    children: [],
+  },
+  {
+    title: "Clothings",
+    children: [],
+  },
+  {
+    title: "Shoes",
+    children: [],
+  },
+  {
+    title: "Sportswear",
+    children: [],
+  },
+  {
+    title: "Accessories",
+    children: [],
+  },
+  {
+    title: "Winter",
+    children: [],
+  },
+  {
+    title: "Topman",
+    children: [],
+  },
+  {
+    title: "Face + Body",
+    children: [],
+  },
+  {
+    title: "Brands",
+    children: [],
+  },
+  {
+    title: "Outlet",
+    children: [],
+  },
+  {
+    title: "Marketplace",
+    children: [],
   },
 ];

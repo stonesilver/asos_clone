@@ -30,3 +30,8 @@ export interface AUthProps {
   href?: string;
   divider?: boolean;
 }
+
+export interface DesktopMenuProps {
+  title: string;
+  children: [];
+}
