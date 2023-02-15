@@ -5,13 +5,11 @@ import React from "react";
 import {
   womenMobileMenuData,
   menMobileMenuData,
+  userOption,
+  userAuth,
   footerLinks,
 } from "./assets/data";
 import Link from "next/link";
-import BoxIcon from "../../public/icons/box.svg";
-import QuestionIcon from "../../public/icons/question-circle.svg";
-import ChatIcon from "../../public/icons/chat.svg";
-import UserIcon from "../../public/icons/user.svg";
 import Transition from "./Transition";
 
 interface Props {
@@ -130,52 +128,54 @@ const MobileMenu: React.FC<Props> = ({ show, close }) => {
 
             <div className="mt-6">
               <ul className="flex items-center px-4">
-                <li className="underline text-xl">Sign in</li>
-                <li className="mx-2">|</li>
-                <li className="underline text-xl">Join</li>
+                {userAuth.map(({ title, href, divider }, idx) =>
+                  divider ? (
+                    <li key={idx} className="mx-2">
+                      |
+                    </li>
+                  ) : (
+                    <li key={idx} className="underline text-xl">
+                      <Link href={{ pathname: href }}>{title}</Link>
+                    </li>
+                  )
+                )}
               </ul>
 
               <div className="mt-6 bg-white px-4 py-3">
-                <Link
-                  href="/"
-                  className="flex items-center px-4 py-3 hover:bg-text-50"
-                >
-                  <span className="relative w-6 h-6 cursor-pointer mr-3">
-                    <Image
-                      src="/icons/user.svg"
-                      alt="user"
-                      fill={true}
-                      sizes="24px"
-                    />
-                  </span>
-                  <p className="text-lg">My Account</p>
-                </Link>
-
-                <Link
-                  href="/"
-                  className="flex items-center px-4 py-3 hover:bg-text-50"
-                >
-                  <BoxIcon className="w-6 h-6 mr-3 cursor-pointer dark-icon" />
-                  <p className="text-lg">My Orders</p>
-                </Link>
-
-                <Link
-                  href="/"
-                  className="flex items-center px-4 py-3 hover:bg-text-50"
-                >
-                  <QuestionIcon className="w-6 h-6 mr-3 cursor-pointer dark-icon" />
-                  <p className="text-lg">Returns Information</p>
-                </Link>
-
-                <Link
-                  href="/"
-                  className="flex items-center px-4 py-3 hover:bg-text-50"
-                >
-                  <ChatIcon className="w-6 h-6 mr-3 cursor-pointer dark-icon" />
-                  <p className="text-lg">Contact Preferences</p>
-                </Link>
+                {userOption.map(({ title, href, icon }) => (
+                  <Link
+                    key={title}
+                    href={{ pathname: href }}
+                    className="flex items-center py-3 hover:bg-text-50"
+                  >
+                    <span className="relative w-6 h-6 cursor-pointer mr-3">
+                      <Image src={icon} alt="user" fill={true} sizes="24px" />
+                    </span>
+                    <p className="text-lg">{title}</p>
+                  </Link>
+                ))}
               </div>
             </div>
+
+            <ul className="">
+              {footerLinks.slice(0, 3).map(({ category, children }) => (
+                <li key={category} className="text-base">
+                  <div className="flex justify-between items-center px-3 py-2  border-b border-text-200">
+                    <span className="text-text-500 font-medium">
+                      {category}
+                    </span>
+                    <span className="text-2xl">+</span>
+                  </div>
+                  <ul className="px-3 max-h-0 overflow-hidden">
+                    {children.map(({ title, href }) => (
+                      <li key={title} className="py-2 text-text-300">
+                        <Link href={{ pathname: href }}>{title}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

@@ -1,4 +1,9 @@
-import { FooterProps, MobileMenuProps, UserProps } from "./data.types";
+import {
+  FooterProps,
+  MobileMenuProps,
+  UserProps,
+  AUthProps,
+} from "./data.types";
 
 export const footerLinks: FooterProps[] = [
   {
@@ -263,5 +268,19 @@ export const menMobileMenuData: MobileMenuProps[] = [
     bgImg: "/images/men_11.jpeg",
     desc: "up to 70% off",
     height: "big",
+  },
+];
+
+export const userAuth: AUthProps[] = [
+  {
+    title: "Sign in",
+    href: "/",
+  },
+  {
+    divider: true,
+  },
+  {
+    title: "Join",
+    href: "/",
   },
 ];

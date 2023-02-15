@@ -24,3 +24,9 @@ export interface UserProps {
   href: string;
   icon: string;
 }
+
+export interface AUthProps {
+  title?: string;
+  href?: string;
+  divider?: boolean;
+}
