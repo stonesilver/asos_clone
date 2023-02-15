@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
                         className="w-5 h-5 rounded-full border ml-1"
                       />
                     </span>{" "}
-                    |
+                    <span className="px-2">|</span>
                     <span className="text-text-400 font-semibold text-lg hover:text-blue-500 cursor-pointer">
                       Change
                     </span>

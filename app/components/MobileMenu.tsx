@@ -19,9 +19,15 @@ interface Props {
 
 const MobileMenu: React.FC<Props> = ({ show, close }) => {
   const [activeTab, setActiveTab] = React.useState<string>("women");
+  const [footerMenu, setFooterMenu] = React.useState<string>("");
 
   const switchTab: (tab: string) => void = (tab) => {
     setActiveTab(tab);
+  };
+
+  const showFooterMenu: (title: string) => void = (title) => {
+    if (title === footerMenu) return setFooterMenu("");
+    setFooterMenu(title);
   };
 
   const activeData =
@@ -164,9 +170,18 @@ const MobileMenu: React.FC<Props> = ({ show, close }) => {
                     <span className="text-text-500 font-medium">
                       {category}
                     </span>
-                    <span className="text-2xl">+</span>
+                    <button
+                      className="text-2xl w-6"
+                      onClick={() => showFooterMenu(category)}
+                    >
+                      {footerMenu === category ? "-" : "+"}
+                    </button>
                   </div>
-                  <ul className="px-3 max-h-0 overflow-hidden">
+                  <ul
+                    className={`px-3  ${
+                      footerMenu === category ? "max-h-[700px]" : "max-h-0"
+                    } transition-all overflow-hidden`}
+                  >
                     {children.map(({ title, href }) => (
                       <li key={title} className="py-2 text-text-300">
                         <Link href={{ pathname: href }}>{title}</Link>
@@ -175,6 +190,20 @@ const MobileMenu: React.FC<Props> = ({ show, close }) => {
                   </ul>
                 </li>
               ))}
+              <div className="flex items-center text-black px-3 py-4">
+                <span className="flex items-center text-lg text-text-300">
+                  You're in{" "}
+                  <img
+                    src="https://assets.asosservices.com/storesa/images/flags/ng.png"
+                    alt="nigeria"
+                    className="w-5 h-5 rounded-full border ml-1"
+                  />
+                </span>{" "}
+                <span className="px-2">|</span>
+                <span className="text-text-400 font-semibold text-lg hover:text-blue-500 cursor-pointer">
+                  Change
+                </span>
+              </div>
             </ul>
           </div>
         </div>
