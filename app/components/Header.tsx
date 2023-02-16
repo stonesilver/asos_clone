@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import Input from "./Input";
 import { ChangeEvent } from "react";
@@ -160,15 +161,61 @@ const Header: React.FC = () => {
 
       <div className="h-[50px] bg-text-500 hidden lg:block">
         <Container>
-          <ul className="flex h-full">
+          <ul className="flex h-full relative">
             {desktopMenuData.map(({ title }) => (
               <li
                 key={title}
-                className="flex items-center justify-center transition-all px-4 text-white text-base h-full hover:bg-white hover:text-black"
+                className="flex items-center peer justify-center transition-all px-4 select-none text-white h-full hover:bg-white hover:text-black"
               >
                 {title}
               </li>
             ))}
+            <div className="grid grid-cols-4 absolute left-0 top-[50px] peer-hover:opacity-100 opacity-0 h-[400px] w-full bg-white shadow-lg z-40 py-5 px-6">
+              <div className="border-r">
+                <h3 className="border-b border-black w-fit text-black font-semibold tracking-widest">
+                  NEW PRODUCTS
+                </h3>
+                <ul className="mt-4">
+                  {[
+                    "View all",
+                    "Clothing",
+                    "Shoes",
+                    "Coats & Jackets",
+                    "Hoodies",
+                    "T-Shirts & Vests",
+                    "Sportswear",
+                    "Accessories",
+                    "Face + Body",
+                  ].map((itm) => (
+                    <li key={itm} className="py-2">
+                      <Link href="/">{itm}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="border-r px-4">
+                <h3 className="border-b border-black w-fit text-black font-semibold tracking-widest">
+                  SHOP BY BRANDS
+                </h3>
+                <ul className="mt-4">
+                  <li className="flex items-center">
+                    <span className="w-[40px] h-[40px] overflow-hidden relative rounded-full border border-text-100 hover:border-blue-300">
+                      <Image
+                        src="/images/nav-1.webp"
+                        fill={true}
+                        sizes="40px"
+                        alt="navigation"
+                      />
+                    </span>
+                    <span className="ml-3 h-[40px] border-b px-1 flex items-center">
+                      Ski & Snowboard
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div className="border-r"></div>
+              <div className="border-r"></div>
+            </div>
           </ul>
         </Container>
       </div>

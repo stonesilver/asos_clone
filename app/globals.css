@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply font-futura text-text-400 text-sm bg-white;
+    @apply font-futura text-text-400 bg-white;
   }
 
   body {
