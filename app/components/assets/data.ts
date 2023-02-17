@@ -8,7 +8,7 @@ import {
 
 export const footerLinks: FooterProps[] = [
   {
-    category: "HELP & INFORMATION",
+    category: "help & information",
     children: [
       {
         title: "Help",
@@ -29,7 +29,7 @@ export const footerLinks: FooterProps[] = [
     ],
   },
   {
-    category: "ABOUT ASOS",
+    category: "about ASOS",
     children: [
       {
         title: "About us",
@@ -50,7 +50,7 @@ export const footerLinks: FooterProps[] = [
     ],
   },
   {
-    category: "MORE FROM ASOS",
+    category: "more from ASOS",
     children: [
       {
         title: "Mobile and ASOS app",
@@ -75,7 +75,7 @@ export const footerLinks: FooterProps[] = [
     ],
   },
   {
-    category: "SHOPPING FROM:",
+    category: "shopping from:",
     children: [],
     location: true,
   },

@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
         <div className="flex max-w-[1400px] mx-auto py-8 min-h-64">
           {footerLinks.map(({ category, children, location }) => (
             <div className="flex-1" key={category}>
-              <h4 className="text-text-400 font-semibold text-lg">
+              <h4 className="text-text-400 font-semibold text-sm uppercase">
                 {category}
               </h4>
               <div className="mt-5">
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
                   <>
                     <Link
                       href={href}
-                      className="block text-base mt-3 hover:text-blue-500"
+                      className="block mt-3 hover:text-blue-500"
                     >
                       {title}
                     </Link>
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
                       />
                     </span>{" "}
                     <span className="px-2">|</span>
-                    <span className="text-text-400 font-semibold text-lg hover:text-blue-500 cursor-pointer">
+                    <span className="text-text-400 font-semibold text-base hover:text-blue-500 cursor-pointer">
                       Change
                     </span>
                   </div>
@@ -88,10 +88,10 @@ const Footer: React.FC = () => {
 
       <div className="bg-text-200 px-4 md:px-8 lg:px-16">
         <div className="max-w-[1400px] mx-auto h-[50px] flex items-center justify-between">
-          <span className="text-sm">
+          <span className="text-xs">
             &#169; {new Date().getFullYear()} ASOS
           </span>
-          <div className="flex text-sm font-medium">
+          <div className="flex text-xs font-medium">
             <span className="border-r border-text-400 pr-2">
               Privacy & Cookies
             </span>

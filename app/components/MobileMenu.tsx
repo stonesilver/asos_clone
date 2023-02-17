@@ -17,6 +17,17 @@ interface Props {
   close: () => void;
 }
 
+const footer = [
+  {
+    img: "/images/women_13.webp",
+    title: "gift vouchers",
+  },
+  {
+    img: "/images/women_14.webp",
+    title: "download the app",
+  },
+];
+
 const MobileMenu: React.FC<Props> = ({ show, close }) => {
   const [activeTab, setActiveTab] = React.useState<string>("women");
   const [footerMenu, setFooterMenu] = React.useState<string>("");
@@ -38,7 +49,7 @@ const MobileMenu: React.FC<Props> = ({ show, close }) => {
       <div className="fixed top-0 w-screen h-screen bg-[#27252526] z-50 lg:hidden">
         <div className="bg-white max-w-[320px] h-screen relative overflow-y-auto">
           <span
-            className="fixed top-0 left-[320px] text-white z-50 bg-primary font-extrabold text-4xl px-4 py-2"
+            className="fixed top-0 left-[320px] text-white z-50 bg-primary font-extrabold text-xl px-3 py-2"
             onClick={close}
           >
             &#10005;
@@ -49,11 +60,10 @@ const MobileMenu: React.FC<Props> = ({ show, close }) => {
             {["women", "men"].map((itm) => (
               <button
                 key={itm}
-                className={`flex-1 text-lg tracking-wider font-semibold h-full uppercase ${
-                  activeTab === itm
-                    ? "border-b-2 border-black text-black"
-                    : "border-b text-text-400"
-                }`}
+                className={`flex-1 text-sm tracking-widest font-semibold h-full uppercase ${activeTab === itm
+                  ? "border-b-2 border-black text-black"
+                  : "border-b text-text-400"
+                  }`}
                 onClick={() => switchTab(itm)}
               >
                 {itm}
@@ -67,26 +77,22 @@ const MobileMenu: React.FC<Props> = ({ show, close }) => {
               ({ title, desc, bgColor, bgImg, height, color, top }) => (
                 <li
                   key={title}
-                  className={`${height === "big" ? "h-[96px]" : "h-14"} ${
-                    top ? "text-center" : "flex flex-col justify-center"
-                  } px-4  ${
-                    bgImg
+                  className={`${height === "big" ? "h-[96px]" : "h-14"} ${top ? "text-center" : "flex flex-col justify-center"
+                    } px-4  ${bgImg
                       ? "bg-text-100 bg-contain bg-right bg-no-repeat"
                       : bgColor
-                  } mb-4`}
+                    } mb-4`}
                   style={{ backgroundImage: bgImg && `url('${bgImg}')` }}
                 >
                   <span
-                    className={`${
-                      top ? "text-6xl" : "text-lg"
-                    } font-semibold tracking-wider uppercase ${
-                      color ? "text-white" : "text-black"
-                    } w-1/2`}
+                    className={`${top ? "text-5xl" : "text-base"
+                      } font-semibold tracking-wider uppercase ${color ? "text-white" : "text-black"
+                      } w-1/2`}
                   >
                     {title}
                   </span>
                   {desc && (
-                    <span className="uppercase text-xl font-light tracking-wider w-1/2">
+                    <span className="uppercase text-sm font-light tracking-wider w-1/2">
                       {desc}
                     </span>
                   )}
@@ -94,28 +100,15 @@ const MobileMenu: React.FC<Props> = ({ show, close }) => {
               )
             )}
             <li className="flex items-stretch">
-              <span className="flex-1 border mr-4 px-2">
-                <img
-                  src="/images/women_13.webp"
-                  alt=""
-                  className="object-contain"
-                />
+              {footer.map(({ title, img }) => (
+                <span key={title} className="flex-1 border mr-4 px-2">
+                  <img src={img} alt="" className="object-contain" />
 
-                <p className="uppercase text-sm font-semibold text-center tracking-wider">
-                  gift vouchers
-                </p>
-              </span>
-              <span className="flex-1 border px-2">
-                <img
-                  src="/images/women_14.webp"
-                  alt=""
-                  className="object-contain"
-                />
-
-                <p className="uppercase text-sm font-semibold text-center tracking-wider">
-                  download the app
-                </p>
-              </span>
+                  <p className="uppercase text-xs font-semibold text-text-500 mt-1 text-center tracking-wider">
+                    {title}
+                  </p>
+                </span>
+              ))}
             </li>
           </ul>
 
@@ -140,7 +133,7 @@ const MobileMenu: React.FC<Props> = ({ show, close }) => {
                       |
                     </li>
                   ) : (
-                    <li key={idx} className="underline text-xl">
+                    <li key={idx} className="underline text-base">
                       <Link href={{ pathname: href }}>{title}</Link>
                     </li>
                   )
@@ -157,7 +150,7 @@ const MobileMenu: React.FC<Props> = ({ show, close }) => {
                     <span className="relative w-6 h-6 cursor-pointer mr-3">
                       <Image src={icon} alt="user" fill={true} sizes="24px" />
                     </span>
-                    <p className="text-lg">{title}</p>
+                    <p className="text-base">{title}</p>
                   </Link>
                 ))}
               </div>
@@ -165,22 +158,21 @@ const MobileMenu: React.FC<Props> = ({ show, close }) => {
 
             <ul className="">
               {footerLinks.slice(0, 3).map(({ category, children }) => (
-                <li key={category} className="text-base">
+                <li key={category} className="text-sm">
                   <div className="flex justify-between items-center px-3 py-2  border-b border-text-200">
-                    <span className="text-text-500 font-medium">
+                    <span className="text-text-500 text-sm capitalize">
                       {category}
                     </span>
                     <button
-                      className="text-2xl w-6"
+                      className="text-xl w-6"
                       onClick={() => showFooterMenu(category)}
                     >
                       {footerMenu === category ? "-" : "+"}
                     </button>
                   </div>
                   <ul
-                    className={`px-3  ${
-                      footerMenu === category ? "max-h-[700px]" : "max-h-0"
-                    } transition-all overflow-hidden`}
+                    className={`px-3  ${footerMenu === category ? "max-h-[700px]" : "max-h-0"
+                      } transition-all overflow-hidden`}
                   >
                     {children.map(({ title, href }) => (
                       <li key={title} className="py-2 text-text-300">
@@ -191,7 +183,7 @@ const MobileMenu: React.FC<Props> = ({ show, close }) => {
                 </li>
               ))}
               <div className="flex items-center text-black px-3 py-4">
-                <span className="flex items-center text-lg text-text-300">
+                <span className="flex items-center text-text-300">
                   You're in{" "}
                   <img
                     src="https://assets.asosservices.com/storesa/images/flags/ng.png"
@@ -200,7 +192,7 @@ const MobileMenu: React.FC<Props> = ({ show, close }) => {
                   />
                 </span>{" "}
                 <span className="px-2">|</span>
-                <span className="text-text-400 font-semibold text-lg hover:text-blue-500 cursor-pointer">
+                <span className="text-text-400 font-semibold hover:text-blue-500 cursor-pointer">
                   Change
                 </span>
               </div>

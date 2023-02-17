@@ -109,17 +109,15 @@ const Header: React.FC = () => {
             <div className="items-center hidden lg:flex h-full">
               <Link
                 href="/women"
-                className={`flex items-center justify-center ${
-                  pathname?.includes("/women") && "bg-text-500"
-                } text-xl text-bold w-[100px] h-full border-l border-text-500 hover:bg-text-500`}
+                className={`flex items-center justify-center ${pathname?.includes("/women") && "bg-text-500"
+                  } text-xl text-bold w-[100px] h-full border-l border-text-500 hover:bg-text-500`}
               >
                 Women
               </Link>
               <Link
                 href="/men"
-                className={`flex items-center justify-center ${
-                  pathname?.includes("/men") && "bg-text-500"
-                } text-xl text-bold w-[100px] h-full border-x border-text-500 hover:bg-text-500`}
+                className={`flex items-center justify-center ${pathname?.includes("/men") && "bg-text-500"
+                  } text-xl text-bold w-[100px] h-full border-x border-text-500 hover:bg-text-500`}
               >
                 Men
               </Link>
