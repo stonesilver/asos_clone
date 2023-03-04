@@ -53,7 +53,7 @@ const DesktopMenu: React.FC = () => {
                                         "Accessories",
                                         "Face + Body",
                                     ].map((itm) => (
-                                        <li key={itm} className="py-2">
+                                        <li key={itm} className="py-2 hover:text-blue-300 max-w-fit">
                                             <Link href="/">{itm}</Link>
                                         </li>
                                     ))}
@@ -67,15 +67,17 @@ const DesktopMenu: React.FC = () => {
                                 <ul className="mt-4">
                                     <Link href="/" className='group'>
                                         <li className="flex items-center">
-                                            <span className="w-[40px] h-[40px] overflow-hidden relative rounded-full border border-text-100 group-hover:border-blue-300">
-                                                <Image
-                                                    src="/images/nav-1.webp"
-                                                    fill={true}
-                                                    sizes="40px"
-                                                    alt="navigation"
-                                                />
-                                            </span>
-                                            <span className="ml-3 h-[40px] border-b px-1 flex items-center group-hover:text-blue-300">
+                                            <div className="border border-text-100 h-fit w-fit rounded-full p-[2px]">
+                                                <span className="block w-[40px] h-[40px] overflow-hidden relative rounded-full group-hover:border-blue-300">
+                                                    <Image
+                                                        src="/images/nav-1.webp"
+                                                        fill={true}
+                                                        sizes="40px"
+                                                        alt="navigation"
+                                                    />
+                                                </span>
+                                            </div>
+                                            <span className="ml-3 h-[40px] border-b px-1 flex max-w-max items-center group-hover:text-blue-300">
                                                 Ski & Snowboard
                                             </span>
                                         </li>
@@ -90,9 +92,11 @@ const DesktopMenu: React.FC = () => {
                                 <div className="mt-4 flex flex-wrap gap-y-6">
                                     {["ASOS Curve & Plus size", "Maternity", "Petite", "Tall"].map(itm =>
                                         <Link href="/" key={itm} className="flex-[50%] group">
-                                            <span className="relative block h-[78px] w-[78px] mx-auto overflow-hidden rounded-full border group-hover:border-blue-300 border-text-200">
-                                                <Image src="/images/mw_gbl.webp" fill={true} alt="big bold woman" sizes='78px' />
-                                            </span>
+                                            <div className="border border-text-100 h-fit w-fit rounded-full p-[2px] mx-auto">
+                                                <span className="relative block h-[78px] w-[78px] mx-auto overflow-hidden rounded-full group-hover:border-blue-300 border-text-200">
+                                                    <Image src="/images/mw_gbl.webp" fill={true} alt="big bold woman" sizes='78px' />
+                                                </span>
+                                            </div>
                                             <p className="w-4/5 text-center mx-auto mt-1 group-hover:text-blue-300">{itm}</p>
                                         </Link>)}
                                 </div>
@@ -100,7 +104,7 @@ const DesktopMenu: React.FC = () => {
 
                             <div className="border-r px-4">
                                 <ul className="flex flex-wrap">
-                                    <li className="max-w-[289px] flex-1 h-32 border">
+                                    <li className="max-w-[289px] flex-1 h-32 border p-[2px]">
                                         <Link href="/" className="block relative w-full h-full after:content-[''] after:absolute after:top-0 after:w-full after:h-full after:bg-[linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8))]">
                                             <Image src="/images/nyx.webp" alt="nyx" fill={true} sizes="auto" />
                                         </Link>
