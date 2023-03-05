@@ -31,7 +31,13 @@ export interface AUthProps {
   divider?: boolean;
 }
 
+export interface DesktopLiProp {
+  title: string;
+  li: {} | { label: string; href: string }[];
+}
+
 export interface DesktopMenuProps {
   title: string;
-  children: [];
+  type: string;
+  children: DesktopLiProp[];
 }

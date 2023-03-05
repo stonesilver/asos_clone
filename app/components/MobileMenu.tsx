@@ -70,7 +70,7 @@ const MobileMenu: React.FC<Props> = ({ show, close }) => {
   return (
     <Transition name="move-in" show={show}>
       <div className="fixed top-0 w-screen h-screen bg-[#27252526] z-50 lg:hidden">
-        <div className="bg-white max-w-[320px] h-screen relative overflow-y-auto">
+        <div className="bg-white max-w-[320px] h-screen relative overflow-y-auto" >
           <span
             className="fixed top-0 left-[320px] text-white z-50 bg-primary font-extrabold text-xl px-3 py-2"
             onClick={close}
@@ -78,34 +78,27 @@ const MobileMenu: React.FC<Props> = ({ show, close }) => {
             &#10005;
           </span>
 
-          {/* Tab switch */}
-          {step.step === 0 ?
-            <div className="h-[50px] flex items-center text-text-200 sticky top-0 bg-white">
-              {["women", "men"].map((itm) => (
-                <button
-                  key={itm}
-                  className={`flex-1 text-sm tracking-widest font-semibold h-full uppercase ${activeTab === itm
-                    ? "border-b-2 border-black text-black"
-                    : "border-b text-text-400"
-                    }`}
-                  onClick={() => switchTab(itm)}
-                >
-                  {itm}
-                </button>
-              ))}
-            </div>
-            : <div className="h-[50px] flex items-center text-text-200 sticky top-0 bg-white px-2 border-b border-text-100">
-              <span className="relative w-7 h-7 cursor-pointer" onClick={goBack}>
-                <Image src='/icons/arrow-back.svg' alt="user" fill={true} sizes="32px" />
-              </span>
-              <h1 className="flex-1 text-center text-lg tracking-widest font-semibold text-black uppercase">{step.title}</h1>
-              <span className="w-7 h-7 hidden"></span>
-            </div>
-          }
-
           {/* content */}
-          {step.step === 0 ?
+          <Transition name="move-in" show={step.step === 0}>
             <div>
+              {/* Tab switch */}
+              {step.step === 0 &&
+                <div className="h-[50px] flex items-center text-text-200 sticky top-0 bg-white">
+                  {["women", "men"].map((itm) => (
+                    <button
+                      key={itm}
+                      className={`flex-1 text-sm tracking-widest font-semibold h-full uppercase ${activeTab === itm
+                        ? "border-b-2 border-black text-black"
+                        : "border-b text-text-400"
+                        }`}
+                      onClick={() => switchTab(itm)}
+                    >
+                      {itm}
+                    </button>
+                  ))}
+                </div>
+              }
+              
               <ul className="p-4">
                 {activeData.map(
                   ({ title, desc, bgColor, bgImg, height, color, top }) => (
@@ -234,13 +227,23 @@ const MobileMenu: React.FC<Props> = ({ show, close }) => {
                 </ul>
               </div>
             </div>
-            : <Transition name="move-in" show={step.step === 1}>
-              <div className="border" style={{ minHeight: 'calc(100vh - 50px)' }}></div>
-            </Transition>}
-        </div>
-      </div>
+          </Transition>
+
+          <Transition name="move-in" show={step.step === 1}>
+            <div className="h-[50px] flex items-center text-text-200 sticky top-0 bg-white px-2 border-b border-text-100">
+              <span className="relative w-7 h-7 cursor-pointer" onClick={goBack}>
+                <Image src='/icons/arrow-back.svg' alt="user" fill={true} sizes="32px" />
+              </span>
+              <h1 className="flex-1 text-center text-base tracking-widest font-semibold text-black uppercase">{step.title}</h1>
+              <span className="w-7 h-7 hidden"></span>
+            </div>
+            <div className="bg-purple-100" style={{ minHeight: 'calc(100vh - 50px)' }}></div>
+          </Transition >
+
+        </div >
+      </div >
     </Transition>
-  );
+  )
 };
 
 export default MobileMenu;

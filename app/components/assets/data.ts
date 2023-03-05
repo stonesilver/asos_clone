@@ -1,3 +1,4 @@
+import { title } from 'process';
 import {
   FooterProps,
   MobileMenuProps,
@@ -289,46 +290,132 @@ export const userAuth: AUthProps[] = [
 export const desktopMenuData: DesktopMenuProps[] = [
   {
     title: "New In",
-    children: [],
+    type: "text-links",
+    children: [
+      {
+        title: "NEW PRODUCTS",
+        li: [
+          { label: "View all", href: "/" },
+          { label: "Clothing", href: "/" },
+          { label: "Shoes", href: "/" },
+          { label: "Coats & Jackets", href: "/" },
+          { label: "Hoodies", href: "/" },
+          { label: "T-Shirts & Vests", href: "/" },
+          { label: "Sportswear", href: "/" },
+          { label: "Accessories", href: "/" },
+          { label: "Face + Body", href: "/" },
+        ],
+      },
+      {
+        title: "BRAND DROPS",
+        li: [
+          {
+            avatar: '/images/nav-1.webp',
+            label: 'ASOS DESIGN',
+            href: '/'
+          }
+        ],
+      },
+    ],
   },
   {
     title: "Clothings",
-    children: [],
+    type: "",
+    children: [
+      {
+        title: "",
+        li: "",
+      },
+    ],
   },
   {
     title: "Shoes",
-    children: [],
+    type: "",
+    children: [
+      {
+        title: "",
+        li: "",
+      },
+    ],
   },
   {
     title: "Sportswear",
-    children: [],
+    type: "",
+    children: [
+      {
+        title: "",
+        li: "",
+      },
+    ],
   },
   {
     title: "Accessories",
-    children: [],
+    type: "",
+    children: [
+      {
+        title: "",
+        li: "",
+      },
+    ],
   },
   {
     title: "Winter",
-    children: [],
+    type: "",
+    children: [
+      {
+        title: "",
+        li: "",
+      },
+    ],
   },
   {
     title: "Topman",
-    children: [],
+    type: "",
+    children: [
+      {
+        title: "",
+        li: "",
+      },
+    ],
   },
   {
     title: "Face + Body",
-    children: [],
+    type: "",
+    children: [
+      {
+        title: "",
+        li: "",
+      },
+    ],
   },
   {
     title: "Brands",
-    children: [],
+    type: "",
+    children: [
+      {
+        title: "",
+        li: "",
+      },
+    ],
   },
   {
     title: "Outlet",
-    children: [],
+    type: "",
+    children: [
+      {
+        title: "",
+        li: "",
+      },
+    ],
   },
   {
     title: "Marketplace",
-    children: [],
+    type: "",
+    children: [
+      {
+        title: "",
+        li: "",
+      },
+    ],
   },
 ];
