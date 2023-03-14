@@ -293,7 +293,7 @@ export const desktopMenuData: DesktopMenuProps[] = [
     children: [
       {
         title: "NEW PRODUCTS",
-        type: "text-links",
+        type: "text_links",
         li: [
           { label: "View all", href: "/" },
           { label: "Clothing", href: "/" },
@@ -308,7 +308,7 @@ export const desktopMenuData: DesktopMenuProps[] = [
       },
       {
         title: "BRAND DROPS",
-        type: "text-links",
+        type: "small_avatar",
         li: [
           {
             avatar: "/images/nav-1.webp",
@@ -344,11 +344,26 @@ export const desktopMenuData: DesktopMenuProps[] = [
       },
       {
         title: "TOP SAVED",
-        type: "text-links",
+        type: "big_avatar",
         li: [
           {
             avatar: "/images/nav-1.webp",
-            label: "",
+            label: "clothings",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "brands",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "sportwears",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "trainers",
             href: "/",
           },
         ],

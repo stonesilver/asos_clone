@@ -37,7 +37,7 @@ const DesktopMenu: React.FC = () => {
                             onMouseEnter={onMouseEnter}
                             onMouseLeave={onMouseLeave}
                         >
-                            <div className="border-r text-links">
+                            <div className="border-r text_links">
                                 <h3 className="border-b border-black w-fit text-black font-semibold tracking-widest uppercase">
                                     new products
                                 </h3>
@@ -60,7 +60,7 @@ const DesktopMenu: React.FC = () => {
                                 </ul>
                             </div>
 
-                            <div className="border-r px-4 small-avatar">
+                            <div className="border-r px-4 small_avatar">
                                 <h3 className="border-b border-black w-fit text-black font-semibold tracking-widest uppercase">
                                     shop by brands
                                 </h3>
@@ -85,7 +85,7 @@ const DesktopMenu: React.FC = () => {
                                 </ul>
                             </div>
 
-                            <div className="border-r px-4 big-avatar">
+                            <div className="border-r px-4 big_avatar">
                                 <h3 className="border-b border-black w-fit text-black font-semibold tracking-widest uppercase">
                                     shop by body fit
                                 </h3>
@@ -102,7 +102,7 @@ const DesktopMenu: React.FC = () => {
                                 </div>
                             </div>
 
-                            <div className="border-r px-4 big-thumbnail">
+                            <div className="border-r px-4 big_thumbnail">
                                 <ul className="flex flex-wrap">
                                     <li className="max-w-[289px] flex-1 h-32 border hover:border-blue-500 p-[2px]">
                                         <Link href="/" className="block relative w-full h-full after:content-[''] after:absolute after:top-0 after:w-full after:h-full after:bg-[linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8))]">
