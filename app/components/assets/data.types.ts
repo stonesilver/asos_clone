@@ -34,10 +34,10 @@ export interface AUthProps {
 export interface DesktopLiProp {
   title: string;
   li: {} | { label: string; href: string }[];
+  type: string;
 }
 
 export interface DesktopMenuProps {
   title: string;
-  type: string;
   children: DesktopLiProp[];
 }

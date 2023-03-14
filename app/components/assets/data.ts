@@ -1,4 +1,4 @@
-import { title } from 'process';
+import { title } from "process";
 import {
   FooterProps,
   MobileMenuProps,
@@ -290,10 +290,10 @@ export const userAuth: AUthProps[] = [
 export const desktopMenuData: DesktopMenuProps[] = [
   {
     title: "New In",
-    type: "text-links",
     children: [
       {
         title: "NEW PRODUCTS",
+        type: "text-links",
         li: [
           { label: "View all", href: "/" },
           { label: "Clothing", href: "/" },
@@ -308,112 +308,149 @@ export const desktopMenuData: DesktopMenuProps[] = [
       },
       {
         title: "BRAND DROPS",
+        type: "text-links",
         li: [
           {
-            avatar: '/images/nav-1.webp',
-            label: 'ASOS DESIGN',
-            href: '/'
-          }
+            avatar: "/images/nav-1.webp",
+            label: "ASOS DESIGN",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Adidas",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "British Brands",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "New Balance",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "New York",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "The North Face",
+            href: "/",
+          },
+        ],
+      },
+      {
+        title: "TOP SAVED",
+        type: "text-links",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "",
+            href: "/",
+          },
         ],
       },
     ],
   },
   {
     title: "Clothings",
-    type: "",
     children: [
       {
         title: "",
+        type: "",
         li: "",
       },
     ],
   },
   {
     title: "Shoes",
-    type: "",
     children: [
       {
         title: "",
+        type: "",
         li: "",
       },
     ],
   },
   {
     title: "Sportswear",
-    type: "",
     children: [
       {
         title: "",
+        type: "",
         li: "",
       },
     ],
   },
   {
     title: "Accessories",
-    type: "",
     children: [
       {
         title: "",
+        type: "",
         li: "",
       },
     ],
   },
   {
     title: "Winter",
-    type: "",
     children: [
       {
         title: "",
+        type: "",
         li: "",
       },
     ],
   },
   {
     title: "Topman",
-    type: "",
     children: [
       {
         title: "",
+        type: "",
         li: "",
       },
     ],
   },
   {
     title: "Face + Body",
-    type: "",
     children: [
       {
         title: "",
+        type: "",
         li: "",
       },
     ],
   },
   {
     title: "Brands",
-    type: "",
     children: [
       {
         title: "",
+        type: "",
         li: "",
       },
     ],
   },
   {
     title: "Outlet",
-    type: "",
     children: [
       {
         title: "",
+        type: "",
         li: "",
       },
     ],
   },
   {
     title: "Marketplace",
-    type: "",
     children: [
       {
         title: "",
+        type: "",
         li: "",
       },
     ],
