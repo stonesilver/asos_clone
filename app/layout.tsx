@@ -1,8 +1,8 @@
 import "./globals.css";
-import Link from "next/link";
 import localFont from "@next/font/local";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import React from "react";
 
 const FuturaPt = localFont({
   src: [

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Container from "./components/Container";
+import React from "react";
 
 const Home: React.FC = () => {
   return (
