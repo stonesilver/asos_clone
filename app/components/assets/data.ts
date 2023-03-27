@@ -294,15 +294,15 @@ export const desktopMenuData: DesktopMenuProps[] = [
         title: "NEW PRODUCTS",
         type: "text_links",
         li: [
-          { label: "View all", href: "/" },
-          { label: "Clothing", href: "/" },
-          { label: "Shoes", href: "/" },
-          { label: "Coats & Jackets", href: "/" },
-          { label: "Hoodies", href: "/" },
-          { label: "T-Shirts & Vests", href: "/" },
-          { label: "Sportswear", href: "/" },
-          { label: "Accessories", href: "/" },
-          { label: "Face + Body", href: "/" },
+          {label: "View all", href: "/"},
+          {label: "Clothing", href: "/"},
+          {label: "Shoes", href: "/"},
+          {label: "Coats & Jackets", href: "/"},
+          {label: "Hoodies", href: "/"},
+          {label: "T-Shirts & Vests", href: "/"},
+          {label: "Sportswear", href: "/"},
+          {label: "Accessories", href: "/"},
+          {label: "Face + Body", href: "/"},
         ],
       },
       {
@@ -357,7 +357,7 @@ export const desktopMenuData: DesktopMenuProps[] = [
           },
           {
             avatar: "/images/nav-1.webp",
-            label: "sportwears",
+            label: "sportswears",
             href: "/",
           },
           {
@@ -365,6 +365,22 @@ export const desktopMenuData: DesktopMenuProps[] = [
             label: "trainers",
             href: "/",
           },
+        ],
+      },
+      {
+        title: "NEW EDITS",
+        type: "big_thumbnail",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "BEST-DRESSED GUESTS",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "RECLAIMED VINTAGE",
+            href: "/",
+          }
         ],
       },
     ],
