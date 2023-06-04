@@ -4,21 +4,21 @@ import React from "react";
 import Link from "next/link";
 import Transition from "./Transition";
 import Image from "next/image";
-import {userOption, userAuth} from "./assets/data";
+import { userOption, userAuth } from "./assets/data";
 
 interface Props {
   enter: boolean;
   setShowMenu: (value: boolean) => void;
 }
 
-const UserDropdown: React.FC<Props> = ({enter, setShowMenu}) => {
+const UserDropdown: React.FC<Props> = ({ enter, setShowMenu }) => {
   return (
     <Transition show={enter} name="translate-down">
       <div
         className="absolute top-12 hidden lg:block shadow-lg min-w-[22rem] right-[-6rem] rounded-lg bg-white min-h-64 text-black z-40">
         <div className="flex justify-between bg-text-100 p-4 cursor-pointer">
           <div className="">
-            {userAuth.map(({title, href, divider}, idx) =>
+            {userAuth.map(({ title, href, divider }, idx) =>
               divider ? (
                 <span key={idx} className="px-2">
                   |
@@ -26,7 +26,7 @@ const UserDropdown: React.FC<Props> = ({enter, setShowMenu}) => {
               ) : (
                 <Link
                   key={idx}
-                  href={{pathname: href}}
+                  href={{ pathname: href }}
                   className="text-text-400 text-base underline border-text-400 hover:text-blue-500"
                 >
                   {title}
@@ -35,7 +35,7 @@ const UserDropdown: React.FC<Props> = ({enter, setShowMenu}) => {
             )}
           </div>
           <span
-            className="text-text-400 text-2xl cursor-pointer cursor-pointer hover:text-blue-500"
+            className="text-text-400 text-2xl cursor-pointer hover:text-blue-500"
             onClick={() => setShowMenu(false)}
           >
             &#10005;
@@ -43,14 +43,14 @@ const UserDropdown: React.FC<Props> = ({enter, setShowMenu}) => {
         </div>
 
         <ul className="flex flex-col gap-3 py-2">
-          {userOption.map(({title, href, icon}) => (
+          {userOption.map(({ title, href, icon }) => (
             <li key={title}>
               <Link
                 href={href}
                 className="flex items-center px-4 py-2 hover:bg-text-50"
               >
                 <span className="relative w-6 h-6 cursor-pointer mr-3">
-                  <Image src={icon} alt="user" fill={true} sizes="24px"/>
+                  <Image src={icon} alt="user" fill={true} sizes="24px" />
                 </span>
                 <p className="text-base">{title}</p>
               </Link>

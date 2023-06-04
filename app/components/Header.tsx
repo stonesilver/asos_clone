@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
 import Input from "./Input";
 import { ChangeEvent } from "react";
@@ -11,8 +11,8 @@ import CartIcon from "../../public/icons/cart.svg";
 import UserIcon from "../../public/icons/user.svg";
 import UserDropdown from "./UserDropdown";
 import MobileMenu from "./MobileMenu";
-import Container from "./Container";
-import { desktopMenuData } from "./assets/data";
+// import Container from "./Container";
+// import { desktopMenuData } from "./assets/data";
 import { usePathname } from "next/navigation";
 import DesktopMenu from "./DesktopMenu";
 

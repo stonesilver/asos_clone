@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
                 {location && (
                   <div className="flex items-center text-black">
                     <span className="flex items-center">
-                      You're in{" "}
+                      You&apos;re in{" "}
                       <img
                         src="https://assets.asosservices.com/storesa/images/flags/ng.png"
                         alt="nigeria"
