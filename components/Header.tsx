@@ -1,20 +1,20 @@
 "use client";
 
 import Link from "next/link";
-// import Image from "next/image";
 import React from "react";
 import Input from "./Input";
 import { ChangeEvent } from "react";
-import SearchIcon from "../assets/icons/search.svg";
-import HeartIcon from "../assets/icons/heart.svg";
-import CartIcon from "../assets/icons/cart.svg";
-import UserIcon from "../assets/icons/user.svg";
+import SearchIcon from "@/assets/icons/search.svg";
+import HeartIcon from "@/assets/icons/heart.svg";
+import CartIcon from "@/assets/icons/cart.svg";
+import UserIcon from "@/assets/icons/user.svg";
 import UserDropdown from "./UserDropdown";
 import MobileMenu from "./MobileMenu";
 // import Container from "./Container";
 // import { desktopMenuData } from "./assets/data";
 import { usePathname } from "next/navigation";
 import DesktopMenu from "./DesktopMenu";
+import { useCloseOnOutsideClick } from "@/Hooks/useCloseOnOutsideClick";
 
 const Header: React.FC = () => {
   const [searchInput, setSearchInput] = React.useState<string>("");
@@ -22,7 +22,6 @@ const Header: React.FC = () => {
   const [showMobileSearch, setShowMobileSearch] =
     React.useState<boolean>(false);
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
-  const [showMenu, setShowMenu] = React.useState<boolean>(false);
   const pathname = usePathname();
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -40,6 +39,8 @@ const Header: React.FC = () => {
   const openMobileMenu = () => {
     setShowMobileMenu(true);
   };
+
+  const { visible, setVisible, ref } = useCloseOnOutsideClick(false)
 
   return (
     <header className="sticky top-0 z-10 w-full">
@@ -62,10 +63,9 @@ const Header: React.FC = () => {
           </div>
           <Input
             value={searchInput}
-            type="search"
+            type="text"
             placeholder=" Search for items and brands"
             handleChange={handleChange}
-            // handleFocus={handleFocus}
             rightIcon={<SearchIcon className="h-5 w-5" />}
             customStyles="rounded-3xl z-90 h-[35px] border border-amber-500"
           />
@@ -128,7 +128,7 @@ const Header: React.FC = () => {
           <div className="hidden flex-1 px-8 md:block">
             <Input
               value={searchInput}
-              type="search"
+              type="text"
               placeholder=" Search for items and brands"
               handleChange={handleChange}
               handleFocus={handleFocus}
@@ -139,16 +139,16 @@ const Header: React.FC = () => {
 
           <div className="flex space-x-5 md:space-x-7 items-center">
             <SearchIcon
-              className="h-6 w-6 md:hidden"
+              className="h-6 w-6 md:hidden white-icon"
               onClick={() => setShowMobileSearch(true)}
             />
 
             <div className="relative flex justify-center">
               <UserIcon
                 className="h-6 w-6 cursor-pointer"
-                onClick={() => setShowMenu(true)}
+                onClick={() => setVisible(true)}
               />
-              <UserDropdown enter={showMenu} setShowMenu={setShowMenu} />
+              <UserDropdown enter={visible} setShowMenu={setVisible} passRef={ref} />
             </div>
 
             <HeartIcon className="h-7 w-7 cursor-pointer" />

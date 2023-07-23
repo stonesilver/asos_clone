@@ -4,7 +4,7 @@ import Container from "../../components/Container";
 const page: React.FC = () => {
   return (
     <div className="text-2xl">
-      <Container>Womens Clothing</Container>
+      <Container>Women's Clothing</Container>
     </div>
   );
 };

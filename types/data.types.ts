@@ -22,7 +22,7 @@ export interface MobileMenuProps {
 export interface UserProps {
   title: string;
   href: string;
-  icon: string;
+  icon: string | any;
 }
 
 export interface AUthProps {

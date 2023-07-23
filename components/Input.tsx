@@ -35,7 +35,7 @@ const Input = forwardRef<Ref, Props>(
         onChange={handleChange}
         onFocus={handleFocus}
         placeholder={placeholder}
-        className={`w-full min-h-full px-4 text-black text-lg placeholder:text-text-400 ${customStyles}`}
+        className={`w-full min-h-full px-4 text-black text-lg outline-none placeholder:text-text-400 ${customStyles}`}
       />
       <div className="absolute right-0 mr-4 z-30">{rightIcon}</div>
     </div>

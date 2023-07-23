@@ -5,12 +5,12 @@ import React from "react";
 import {
   womenMobileMenuData,
   menMobileMenuData,
-  userOption,
   userAuth,
   footerLinks,
 } from "../assets/data";
 import Link from "next/link";
 import Transition from "./Transition";
+import { UserIcon, OrdersIcon, ReturnInfoIcon, ContactIcon } from '@/assets/icons';
 
 interface Props {
   show: boolean;
@@ -30,6 +30,29 @@ const footer = [
   {
     img: "/images/women_14.webp",
     title: "download the app",
+  },
+];
+
+const userOption = [
+  {
+    title: "My Account",
+    href: "/",
+    icon: <UserIcon className="dark-icon w-4 h-4" />,
+  },
+  {
+    title: "My Orders",
+    href: "/",
+    icon: <OrdersIcon className="dark-icon w-4 h-4" />,
+  },
+  {
+    title: "Returns Information",
+    href: "/",
+    icon: <ReturnInfoIcon className="dark-icon w-4 h-4" />,
+  },
+  {
+    title: "Contact Preferences",
+    href: "/",
+    icon: <ContactIcon className="dark-icon w-4 h-4" />,
   },
 ];
 
@@ -176,9 +199,9 @@ const MobileMenu: React.FC<Props> = ({ show, close }) => {
                         className="flex items-center py-3 hover:bg-text-50"
                       >
                         <span className="relative w-6 h-6 cursor-pointer mr-3">
-                          <Image src={icon} alt="user" fill={true} sizes="24px" />
+                          {icon}
                         </span>
-                        <p className="text-base">{title}</p>
+                        <p className="text-sm">{title}</p>
                       </Link>
                     ))}
                   </div>

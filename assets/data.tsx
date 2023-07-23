@@ -1,11 +1,11 @@
 import {
   FooterProps,
   MobileMenuProps,
-  UserProps,
+  // UserProps,
   AUthProps,
   DesktopMenuProps,
 } from "../types/data.types";
-import User from "../assets/icons/user.svg";
+// import { UserIcon, OrdersIcon, ReturnInfoIcon, ContactIcon } from '@/assets/icons';
 
 export const footerLinks: FooterProps[] = [
   {
@@ -82,28 +82,28 @@ export const footerLinks: FooterProps[] = [
   },
 ];
 
-export const userOption: UserProps[] = [
-  {
-    title: "My Account",
-    href: "/",
-    icon: "../assets/icons/user.svg",
-  },
-  {
-    title: "My Orders",
-    href: "/",
-    icon: "/icons/box.svg",
-  },
-  {
-    title: "Returns Information",
-    href: "/",
-    icon: "/icons/question-circle.svg",
-  },
-  {
-    title: "Contact Preferences",
-    href: "/",
-    icon: "/icons/chat.svg",
-  },
-];
+// export const userOption: UserProps[] = [
+//   {
+//     title: "My Account",
+//     href: "/",
+//     icon: <UserIcon className="dark-icon w-6 h-6" />,
+//   },
+//   {
+//     title: "My Orders",
+//     href: "/",
+//     icon: <OrdersIcon className="dark-icon w-6 h-6" />,
+//   },
+//   {
+//     title: "Returns Information",
+//     href: "/",
+//     icon: <ReturnInfoIcon className="dark-icon w-6 h-6" />,
+//   },
+//   {
+//     title: "Contact Preferences",
+//     href: "/",
+//     icon: <ContactIcon className="dark-icon w-6 h-6" />,
+//   },
+// ];
 
 export const footerSocialHandles: string[] = [
   "/icons/facebook.svg",

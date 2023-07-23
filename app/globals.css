@@ -4,11 +4,11 @@
 
 @layer base {
   html {
-    @apply font-futura text-text-400 bg-white;
+    @apply bg-white font-futura text-text-400;
   }
 
   body {
-    @apply bg-white text-text-400 text-sm;
+    @apply bg-white text-sm text-text-400;
   }
 }
 
@@ -63,6 +63,25 @@ span {
   transition: opacity 300ms, transform 300ms;
 }
 
+.fade-in-enter {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.fade-in-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.fade-in-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-in-exit-active {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 300ms, transform 300ms;
+}
+
 .translate-down-enter {
   opacity: 0;
   transform: translateY(70px);
@@ -100,6 +119,10 @@ span {
 
 .dark-icon path {
   stroke: black;
+}
+
+.white-icon path {
+  fill: #ffffff;
 }
 
 .dark-icon circle {
