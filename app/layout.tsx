@@ -1,7 +1,7 @@
 import "./globals.css";
 import localFont from "@next/font/local";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import React from "react";
 import { Metadata } from 'next';
 
@@ -13,37 +13,37 @@ export const metadata: Metadata = {
 const FuturaPt = localFont({
   src: [
     {
-      path: "./fonts/futura-pt/FuturaCyrillicLight.woff",
+      path: "./_fonts/futura-pt/FuturaCyrillicLight.woff",
       weight: "300",
       style: "normal",
     },
     {
-      path: "./fonts/futura-pt/FuturaCyrillicBook.woff",
+      path: "./_fonts/futura-pt/FuturaCyrillicBook.woff",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/futura-pt/FuturaCyrillicMedium.woff",
+      path: "./_fonts/futura-pt/FuturaCyrillicMedium.woff",
       weight: "500",
       style: "normal",
     },
     {
-      path: "./fonts/futura-pt/FuturaCyrillicDemi.woff",
+      path: "./_fonts/futura-pt/FuturaCyrillicDemi.woff",
       weight: "600",
       style: "normal",
     },
     {
-      path: "./fonts/futura-pt/FuturaCyrillicBold.woff",
+      path: "./_fonts/futura-pt/FuturaCyrillicBold.woff",
       weight: "700",
       style: "normal",
     },
     {
-      path: "./fonts/futura-pt/FuturaCyrillicExtraBold.woff",
+      path: "./_fonts/futura-pt/FuturaCyrillicExtraBold.woff",
       weight: "800",
       style: "normal",
     },
     {
-      path: "./fonts/futura-pt/FuturaCyrillicHeavy.woff",
+      path: "./_fonts/futura-pt/FuturaCyrillicHeavy.woff",
       weight: "900",
       style: "normal",
     },

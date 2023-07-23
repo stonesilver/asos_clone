@@ -6,7 +6,7 @@ import {
   footerPayments,
   footerSocialHandles,
 } from "../assets/data";
-import { FooterChildrenProps } from "./assets/data.types";
+import { FooterChildrenProps } from "../types/data.types";
 
 const Footer: React.FC = () => {
   return (

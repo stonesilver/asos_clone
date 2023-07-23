@@ -4,7 +4,7 @@ import {
   UserProps,
   AUthProps,
   DesktopMenuProps,
-} from "../components/assets/data.types";
+} from "../types/data.types";
 import User from "../assets/icons/user.svg";
 
 export const footerLinks: FooterProps[] = [
