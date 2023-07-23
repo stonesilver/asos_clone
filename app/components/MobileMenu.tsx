@@ -8,7 +8,7 @@ import {
   userOption,
   userAuth,
   footerLinks,
-} from "./assets/data";
+} from "../assets/data";
 import Link from "next/link";
 import Transition from "./Transition";
 
@@ -98,7 +98,7 @@ const MobileMenu: React.FC<Props> = ({ show, close }) => {
                   ))}
                 </div>
               }
-              
+
               <ul className="p-4">
                 {activeData.map(
                   ({ title, desc, bgColor, bgImg, height, color, top }) => (

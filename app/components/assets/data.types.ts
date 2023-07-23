@@ -1,3 +1,5 @@
+import { ReactSVG } from "react";
+
 export interface FooterChildrenProps {
   title: string;
   href: string;
@@ -22,7 +24,7 @@ export interface MobileMenuProps {
 export interface UserProps {
   title: string;
   href: string;
-  icon: string;
+  icon: string | ReactSVG | any;
 }
 
 export interface AUthProps {

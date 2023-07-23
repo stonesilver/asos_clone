@@ -5,10 +5,10 @@ import Link from "next/link";
 import React from "react";
 import Input from "./Input";
 import { ChangeEvent } from "react";
-import SearchIcon from "../../public/icons/search.svg";
-import HeartIcon from "../../public/icons/heart.svg";
-import CartIcon from "../../public/icons/cart.svg";
-import UserIcon from "../../public/icons/user.svg";
+import SearchIcon from "../assets/icons/search.svg";
+import HeartIcon from "../assets/icons/heart.svg";
+import CartIcon from "../assets/icons/cart.svg";
+import UserIcon from "../assets/icons/user.svg";
 import UserDropdown from "./UserDropdown";
 import MobileMenu from "./MobileMenu";
 // import Container from "./Container";
@@ -42,17 +42,17 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="w-full sticky top-0 z-10">
+    <header className="sticky top-0 z-10 w-full">
       {show && (
         <div
           onClick={handleFocus}
-          className="fixed top-0 bg-black opacity-50 w-screen min-h-screen h-screen"
+          className="fixed top-0 h-screen min-h-screen w-screen bg-black opacity-50"
         />
       )}
 
       {showMobileSearch && (
         <div className="fixed h-screen w-screen bg-white p-4">
-          <div className="w-full flex justify-end mb-2">
+          <div className="mb-2 flex w-full justify-end">
             <button
               className="py-1 px-4 text-2xl font-extrabold"
               onClick={() => setShowMobileSearch(false)}
@@ -66,7 +66,7 @@ const Header: React.FC = () => {
             placeholder=" Search for items and brands"
             handleChange={handleChange}
             // handleFocus={handleFocus}
-            rightIcon={<SearchIcon className="w-5 h-5" />}
+            rightIcon={<SearchIcon className="h-5 w-5" />}
             customStyles="rounded-3xl z-90 h-[35px] border border-amber-500"
           />
         </div>
@@ -74,86 +74,86 @@ const Header: React.FC = () => {
 
       <MobileMenu show={showMobileMenu} close={closeMobileMenu} />
 
-      <div className="bg-white hidden px-4 md:px-8 lg:px-16 lg:block">
-        <ul className="flex justify-end items-center h-30 w-full max-w-[1400px] mx-auto">
-          <li className="px-4 border-l border-muted-200 h-full flex items-center">
+      <div className="hidden bg-white px-4 md:px-8 lg:block lg:px-16">
+        <ul className="mx-auto flex h-30 w-full max-w-[1400px] items-center justify-end">
+          <li className="border-muted-200 flex h-full items-center border-l px-4">
             Marketplace
           </li>
-          <li className="px-4 border-l border-muted-200 h-full flex items-center">
+          <li className="border-muted-200 flex h-full items-center border-l px-4">
             Help & FAQs
           </li>
-          <li className="px-4 border-l border-r border-muted-200 h-full flex items-center">
+          <li className="border-muted-200 flex h-full items-center border-l border-r px-4">
             <img
               src="https://assets.asosservices.com/storesa/images/flags/ng.png"
               alt="nigeria"
-              className="w-5 h-5 rounded-full border"
+              className="h-5 w-5 rounded-full border"
             />
           </li>
         </ul>
       </div>
 
       <nav className=" bg-primary px-4 md:px-8 lg:px-16">
-        <div className="flex justify-between items-center w-full text-white max-w-[1366px] mx-auto h-[50px] md:h-[60px]">
-          <div className="flex items-center h-full">
+        <div className="mx-auto flex h-[50px] w-full max-w-[1366px] items-center justify-between text-white md:h-[60px]">
+          <div className="flex h-full items-center">
             <img
               src="./icons/hamburger.svg"
               alt=""
-              className="lg:hidden block mr-4"
+              className="mr-4 block lg:hidden"
               onClick={openMobileMenu}
             />
 
-            <Link href="/" className="flex items-center h-full">
-              <span className="text-3xl md:text-5xl md:pr-4 font-bold mt-[-5px] md:mt-[-10px]">
+            <Link href="/" className="flex h-full items-center">
+              <span className="mt-[-5px] text-3xl font-bold md:mt-[-10px] md:pr-4 md:text-5xl">
                 asos
               </span>
             </Link>
-            <div className="items-center hidden lg:flex h-full">
+            <div className="hidden h-full items-center lg:flex">
               <Link
                 href="/women"
                 className={`flex items-center justify-center ${pathname?.includes("/women") && "bg-text-500"
-                  } text-xl text-bold w-[100px] h-full border-l border-text-500 hover:bg-text-500`}
+                  } text-bold h-full w-[100px] border-l border-text-500 text-xl hover:bg-text-500`}
               >
                 Women
               </Link>
               <Link
                 href="/men"
                 className={`flex items-center justify-center ${pathname?.includes("/men") && "bg-text-500"
-                  } text-xl text-bold w-[100px] h-full border-x border-text-500 hover:bg-text-500`}
+                  } text-bold h-full w-[100px] border-x border-text-500 text-xl hover:bg-text-500`}
               >
                 Men
               </Link>
             </div>
           </div>
 
-          <div className="flex-1 hidden md:block px-8">
+          <div className="hidden flex-1 px-8 md:block">
             <Input
               value={searchInput}
               type="search"
               placeholder=" Search for items and brands"
               handleChange={handleChange}
               handleFocus={handleFocus}
-              rightIcon={<SearchIcon className="w-5 h-5" />}
+              rightIcon={<SearchIcon className="h-5 w-5" />}
               customStyles="rounded-3xl z-90 h-[35px]"
             />
           </div>
 
-          <div className="flex items-center">
+          <div className="flex space-x-5 md:space-x-7 items-center">
             <SearchIcon
-              className="w-6 h-6 mr-5 md:mr-7 md:hidden fill-current"
+              className="h-6 w-6 md:hidden"
               onClick={() => setShowMobileSearch(true)}
             />
 
             <div className="relative flex justify-center">
               <UserIcon
-                className="w-6 h-6 mr-5 md:mr-7 cursor-pointer"
+                className="h-6 w-6 cursor-pointer"
                 onClick={() => setShowMenu(true)}
               />
               <UserDropdown enter={showMenu} setShowMenu={setShowMenu} />
             </div>
 
-            <HeartIcon className="w-7 h-7 mr-5 md:mr-7 cursor-pointer" />
+            <HeartIcon className="h-7 w-7 cursor-pointer" />
 
-            <CartIcon className="w-6 h-6 cursor-pointer" />
+            <CartIcon className="h-6 w-6 cursor-pointer" />
           </div>
         </div>
       </nav>

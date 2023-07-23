@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Transition from "./Transition";
 import Image from "next/image";
-import { userOption, userAuth } from "./assets/data";
+import { userOption, userAuth } from "../assets/data";
 
 interface Props {
   enter: boolean;

@@ -3,6 +3,12 @@ import localFont from "@next/font/local";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import React from "react";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'ASOS | Online Shopping For Latest Clothes and Fashion',
+  description: 'ASOS | Online Shopping For Latest Clothes and Fashion | Fashion | Clothes | Trending Fashion | Dress | Jacket | Jeans',
+};
 
 const FuturaPt = localFont({
   src: [
@@ -53,11 +59,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${FuturaPt.variable}`}>
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
       <body className="min-h-screen flex flex-col">
         <Header />
 

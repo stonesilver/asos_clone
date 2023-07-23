@@ -4,7 +4,8 @@ import {
   UserProps,
   AUthProps,
   DesktopMenuProps,
-} from "./data.types";
+} from "../components/assets/data.types";
+import User from "../assets/icons/user.svg";
 
 export const footerLinks: FooterProps[] = [
   {
@@ -85,7 +86,7 @@ export const userOption: UserProps[] = [
   {
     title: "My Account",
     href: "/",
-    icon: "/icons/user.svg",
+    icon: "../assets/icons/user.svg",
   },
   {
     title: "My Orders",

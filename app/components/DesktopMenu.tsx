@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
 import Container from './Container'
-import { desktopMenuData, womenMobileMenuData } from './assets/data';
+import { desktopMenuData, womenMobileMenuData } from '../assets/data';
 
 const DesktopMenu: React.FC = () => {
   const [show, setShow] = React.useState<boolean>(false)
