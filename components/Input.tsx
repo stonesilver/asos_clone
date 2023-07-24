@@ -10,6 +10,7 @@ type Props = {
   placeholder?: string;
   customStyles?: string;
   rightIcon?: ReactNode;
+  name?: string;
 }
 
 type Ref = HTMLInputElement;
@@ -23,7 +24,7 @@ const Input = forwardRef<Ref, Props>(
       handleFocus,
       placeholder,
       customStyles,
-      rightIcon,
+      rightIcon, name
     },
     ref
   ) => (
@@ -31,6 +32,8 @@ const Input = forwardRef<Ref, Props>(
       <input
         ref={ref}
         type={type}
+        id={name}
+        name={name}
         value={value}
         onChange={handleChange}
         onFocus={handleFocus}

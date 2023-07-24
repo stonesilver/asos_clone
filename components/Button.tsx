@@ -9,10 +9,12 @@ type Props = {
 
 const Button: React.FC<Props> = ({ children, className, variant, type = 'button' }) => {
     const variants = {
-        dark: 'bg-black text-white hover:text-black hover:bg-white hover:border hover:border-black',
+        dark: 'bg-black text-white hover:bg-opacity-70 hover:border hover:border-black',
     }
     return (
-        <button type={type} className={`${className} ${variants[variant as keyof typeof variants]}`}>{children}</button>
+        <button type={type} className={`${className} ${variants[variant as keyof typeof variants]}`}>
+            {children}
+        </button>
     )
 }
 

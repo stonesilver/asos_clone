@@ -39,7 +39,7 @@ const UserDropdown: React.FC<Props> = ({ enter, setShowMenu, passRef }) => {
   return (
     <Transition show={enter} name="fade-in">
       <div ref={passRef}
-        className="absolute top-12 hidden lg:block shadow-lg min-w-[22rem] right-[-6rem] rounded-lg bg-white min-h-64 text-black z-40 overflow-hidden">
+        className="absolute top-10 hidden lg:block shadow-lg min-w-[22rem] right-[-6rem] bg-white min-h-64 text-black z-40 overflow-hidden">
         <div className="flex justify-between bg-text-100 p-4 cursor-pointer">
           <div className="">
             {userAuth.map(({ title, href, divider }, idx) =>

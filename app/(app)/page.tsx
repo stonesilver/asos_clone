@@ -4,7 +4,7 @@ import React from "react";
 
 const Home: React.FC = () => {
   return (
-    <div className="h-full w-full">
+    <div>
       <div className="w-full h-[50px] bg-[#9447ff] hidden md:block">
         <div className="max-w-[1400px] h-full mx-auto flex justify-between items-center text-white text-lg font-semibold px-4 md:px-8 lg:px-16">
           <Link href="/" className="w-28 text-center border-2 border-white">

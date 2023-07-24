@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-white text-sm text-text-400;
+    @apply bg-white text-sm tracking-wide text-text-400;
   }
 }
 
@@ -138,4 +138,9 @@ span {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Remove input background color on paste */
+input:-webkit-autofill {
+  -webkit-background-clip: text !important;
 }
