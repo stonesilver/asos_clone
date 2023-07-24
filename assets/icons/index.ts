@@ -5,3 +5,4 @@ export { default as OrdersIcon } from "./orders.svg";
 export { default as SearchIcon } from "./search.svg";
 export { default as HeartIcon } from "./heart.svg";
 export { default as ReturnInfoIcon } from "./return-info.svg";
+export { default as EmptyBoxIcon } from "./empty-box.svg";

@@ -1,7 +1,5 @@
 import "./globals.css";
 import localFont from "@next/font/local";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import React from "react";
 import { Metadata } from 'next';
 
@@ -59,12 +57,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${FuturaPt.variable}`}>
-      <body className="min-h-screen flex flex-col">
-        <Header />
-
-        <main className="w-full flex-1">{children}</main>
-
-        <Footer />
+      <body className="min-h-screen flex">
+        <main className="flex-1 flex flex-col">
+          {children}
+        </main>
       </body>
     </html>
   );

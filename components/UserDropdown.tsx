@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import Transition from "./Transition";
-import Image from "next/image";
 import { userAuth } from "../assets/data";
 import { UserIcon, OrdersIcon, ReturnInfoIcon, ContactIcon } from '@/assets/icons';
 
@@ -16,12 +15,12 @@ interface Props {
 const userOption = [
   {
     title: "My Account",
-    href: "/",
+    href: "/auth/sign-in",
     icon: <UserIcon className="dark-icon w-5 h-5" />,
   },
   {
     title: "My Orders",
-    href: "/",
+    href: "/saved-items",
     icon: <OrdersIcon className="dark-icon w-5 h-5" />,
   },
   {
@@ -72,7 +71,7 @@ const UserDropdown: React.FC<Props> = ({ enter, setShowMenu, passRef }) => {
             <li key={title}>
               <Link
                 href={href}
-                className="flex items-center px-4 py-4 hover:bg-text-50"
+                className="flex items-center px-4 py-4 hover:bg-text-50" onClick={() => setShowMenu(false)}
               >
                 <span className="relative w-6 h-6 cursor-pointer mr-3">
                   {icon}

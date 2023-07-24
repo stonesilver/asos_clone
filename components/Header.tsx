@@ -151,9 +151,13 @@ const Header: React.FC = () => {
               <UserDropdown enter={visible} setShowMenu={setVisible} passRef={ref} />
             </div>
 
-            <HeartIcon className="h-7 w-7 cursor-pointer" />
+            <Link href="/saved-items">
+              <HeartIcon className="h-7 w-7 cursor-pointer" />
+            </Link>
 
-            <CartIcon className="h-6 w-6 cursor-pointer" />
+            <Link href="/my-cart">
+              <CartIcon className="h-6 w-6 cursor-pointer" />
+            </Link>
           </div>
         </div>
       </nav>

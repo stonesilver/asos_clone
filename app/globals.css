@@ -128,3 +128,14 @@ span {
 .dark-icon circle {
   stroke: black;
 }
+
+.loader {
+  animation: rotate 1.2s linear infinite;
+}
+
+/* loader animation */
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

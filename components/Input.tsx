@@ -2,7 +2,7 @@
 
 import { ChangeEvent, ReactNode, forwardRef } from "react";
 
-interface Props {
+type Props = {
   value: string;
   type?: string;
   handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
