@@ -426,9 +426,76 @@ export const desktopMenuData: DesktopMenuProps[] = [
         ],
       },
       {
-        title: "SHOP BY BODY FIT",
-        type: "",
-        li: [],
+        title: "SHOP BESTSELLERS",
+        type: "small_avatar",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "View All",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Autumn Styles",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Jeans & Trousers",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Jackets & Coats",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Formal Wears",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Designer Brands",
+            href: "/",
+          },
+        ],
+      },
+      {
+        title: "SHOP BY EDIT",
+        type: "small_avatar",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Halloween",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Party Wears",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "ASOS Basics",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Occasion Wears",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Autumn Styles",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Festivals",
+            href: "/",
+          },
+        ],
       },
     ],
   },
@@ -436,19 +503,90 @@ export const desktopMenuData: DesktopMenuProps[] = [
     title: "Shoes",
     children: [
       {
-        title: "",
-        type: "",
-        li: "",
+        title: "SHOP BY PRODUCT",
+        type: "text_links",
+        li: [
+          { label: "Bestsellers", href: "/" },
+          { label: "View All", href: "/" },
+          { label: "New In", href: "/" },
+          { label: "Trainers", href: "/" },
+          { label: "Boats", href: "/" },
+          { label: "Loafers", href: "/" },
+          { label: "Running Trainers", href: "/" },
+          { label: "Sandals", href: "/" },
+          { label: "Shoes", href: "/" },
+          { label: "Slipper & Flip flops", href: "/" },
+          { label: "Slipper", href: "/" },
+          { label: "Socks", href: "/" },
+        ],
       },
-    ],
-  },
-  {
-    title: "Sportswear",
-    children: [
+      {
+        title: "SHOP BY BRAND",
+        type: "small_avatar",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "ASOS DESIGN",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "New Balance",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "On Running",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Adidas Originals",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Asics",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Dr Martens",
+            href: "/",
+          },
+        ],
+      },
+      {
+        title: "SHOP BY TRAINER STYLE",
+        type: "text_links",
+        li: [
+          { label: "Adidas Originals Campus", href: "/" },
+          { label: "Adidas Originals Gazelle", href: "/" },
+          { label: "Adidas Originals Stan Smith", href: "/" },
+          { label: "New Balance 550", href: "/" },
+          { label: "New Balance 530", href: "/" },
+          { label: "New Balance 327", href: "/" },
+          { label: "New Balance 574", href: "/" },
+          { label: "ON Cloudnova", href: "/" },
+          { label: "ON Cloudmonster", href: "/" },
+          { label: "Vans Old Skool", href: "/" },
+          { label: "Reebok Classic", href: "/" },
+        ],
+      },
       {
         title: "",
-        type: "",
-        li: "",
+        type: "big_thumbnail_text",
+        li: [
+          {
+            text: "BLACK TRAINERS",
+          },
+          {
+            text: "CHUNKY SHOES",
+          },
+          {
+            text: "OCCASION SHOES",
+          },
+        ],
       },
     ],
   },
@@ -456,19 +594,347 @@ export const desktopMenuData: DesktopMenuProps[] = [
     title: "Accessories",
     children: [
       {
+        title: "SHOP BY PRODUCT",
+        type: "text_links",
+        li: [
+          { label: "View All", href: "/" },
+          { label: "New In", href: "/" },
+          { label: "Sunglasses", href: "/" },
+          { label: "Caps & Hats", href: "/" },
+          { label: "Belts", href: "/" },
+          { label: "Ties", href: "/" },
+          { label: "Watches", href: "/" },
+          { label: "Beanies", href: "/" },
+          { label: "Gifts", href: "/" },
+          { label: "Gloves", href: "/" },
+          { label: "Scarves", href: "/" },
+          { label: "Socks", href: "/" },
+        ],
+      },
+      {
+        title: "SHOP BY JEWELLERY",
+        type: "small_avatar",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "View All",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Necklaces",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Rings",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Bracelets",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Earrings",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Cufflinks",
+            href: "/",
+          },
+        ],
+      },
+      {
+        title: "SHOP BY BAGS",
+        type: "small_avatar",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "View All",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Backpacks",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Duffle Bags",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Bum Bags",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Shopper Bags",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Wallets",
+            href: "/",
+          },
+        ],
+      },
+      {
         title: "",
-        type: "",
-        li: "",
+        type: "big_thumbnail",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "SMART ACCESSORIES",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "AUTUMN ACCESSORIES",
+            href: "/",
+          },
+        ],
       },
     ],
   },
   {
-    title: "Winter",
+    title: "Sportswear",
     children: [
       {
+        title: "SHOP BY PRODUCT",
+        type: "text_links",
+        li: [
+          { label: "View All", href: "/" },
+          { label: "New In", href: "/" },
+          { label: "Trainers", href: "/" },
+          { label: "Shorts", href: "/" },
+          { label: "Tops", href: "/" },
+          { label: "Accessories", href: "/" },
+          { label: "Hoodies & Sweatshirts", href: "/" },
+          { label: "Jacket", href: "/" },
+          { label: "Joggers", href: "/" },
+          { label: "Trousers & Tights", href: "/" },
+        ],
+      },
+      {
+        title: "SHOP BY ACTIVITY",
+        type: "small_avatar",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Lifestyle",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Gym",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Running",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Outdoors",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Footballs",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Ski & Snowboard",
+            href: "/",
+          },
+        ],
+      },
+      {
+        title: "SHOP BY BRAND",
+        type: "small_avatar",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Adidas",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "ASOS 4505",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "New Balance",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "On Running",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Puma",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "The North Face",
+            href: "/",
+          },
+        ],
+      },
+      {
         title: "",
-        type: "",
-        li: "",
+        type: "big_thumbnail",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "RUNNING",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "NEW BALANCE",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "OUTDOORS",
+            href: "/",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Autumn",
+    children: [
+      {
+        title: "SHOP BY PRODUCT",
+        type: "text_link",
+        li: [
+          { label: "View All", href: "/" },
+          { label: "Bestsellers", href: "/" },
+          { label: "Halloween", href: "/" },
+          { label: "Jumpers & Cardigans", href: "/" },
+          { label: "Hoodies & Sweatshirts", href: "/" },
+          { label: "Trousers & Chinos", href: "/" },
+          { label: "Jeans", href: "/" },
+          { label: "Lounge wear", href: "/" },
+          { label: "Fleeces", href: "/" },
+          { label: "Gilets", href: "/" },
+          { label: "Boots", href: "/" },
+          { label: "Scarves", href: "/" },
+          { label: "Gloves", href: "/" },
+          { label: "Beanies", href: "/" },
+        ],
+      },
+      {
+        title: "SHOP BY EDIT",
+        type: "big_avatar",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Essentials",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Smarts",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Oversized",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Student Styles",
+            href: "/",
+          },
+        ],
+      },
+      {
+        title: "SHOP JACKETS",
+        type: "small_avatar",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "View All",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Puffer Jackets",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Shackets",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Leather Jackets",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Denim Jackets",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Rain Jackets",
+            href: "/",
+          },
+        ],
+      },
+      {
+        title: "SHOP COATS",
+        type: "small_avatar",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "View All",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Trench Coats",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Overcoats",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Parkas",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Smarts Coats",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Puff Coats",
+            href: "/",
+          },
+        ],
       },
     ],
   },

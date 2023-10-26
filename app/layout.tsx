@@ -1,7 +1,7 @@
-import "./globals.css";
-import localFont from "@next/font/local";
+import localFont from "next/font/local";
 import React from "react";
 import { Metadata } from 'next';
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: 'ASOS | Online Shopping For Latest Clothes and Fashion',
