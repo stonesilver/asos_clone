@@ -1,13 +1,13 @@
 import Link from "next/link";
-import Container from "../../components/Container";
+import Container from "@/components/Container";
 import React from "react";
 
 const Home: React.FC = () => {
   return (
     <div>
-      <div className="w-full h-[50px] bg-[#9447ff] hidden md:block">
-        <div className="max-w-[1400px] h-full mx-auto flex justify-between items-center text-white text-lg font-semibold px-4 md:px-8 lg:px-16">
-          <Link href="/" className="w-28 text-center border-2 border-white">
+      <div className="hidden h-[50px] w-full bg-[#9447ff] md:block">
+        <div className="mx-auto flex h-full max-w-[1400px] items-center justify-between px-4 text-lg font-semibold text-white md:px-8 lg:px-16">
+          <Link href="/" className="w-28 border-2 border-white text-center">
             Women
           </Link>
 
@@ -16,51 +16,51 @@ const Home: React.FC = () => {
             <p className="tracking-widest">LIKE SAVINGS! YOU'LL LOVE THIS</p>
           </div>
 
-          <Link href="/" className="w-28 text-center border-2 border-white">
+          <Link href="/" className="w-28 border-2 border-white text-center">
             Men
           </Link>
         </div>
       </div>
       <Container>
-        <div className="relative flex flex-col item-center h-full w-full md:pt-12">
-          <div className="relative md:absolute border-t md:border-t-0 overflow-x-hidden border-white flex flex-col md:flex-row justify-around items-center bg-primary text-white bottom-0 left-0 w-full h-[74px] md:h-[54px]">
+        <div className="item-center relative flex h-full w-full flex-col md:pt-12">
+          <div className="relative bottom-0 left-0 flex h-[74px] w-full flex-col items-center justify-around overflow-x-hidden border-t border-white bg-primary text-white md:absolute md:h-[54px] md:flex-row md:border-t-0">
             <div className="move-one">
-              <p className="text-base md:text-lg font-bold tracking-widest">
+              <p className="text-base font-bold tracking-widest md:text-lg">
                 EASY WORLDWIDE DELIEVRY
               </p>
               <p className="text-center md:text-left">*minimum spends apply</p>
             </div>
-            <div className="text-base move-two hidden md:block">
+            <div className="move-two hidden text-base md:block">
               <p className="text-lg font-bold tracking-widest md:max-w-[250px]">
                 ASOS DESIGN and 850+ brands
               </p>
             </div>
           </div>
 
-          <picture className="w-full h-full">
+          <picture className="h-full w-full">
             <source srcSet="/images/small.webp" media="(max-width: 768px)" />
             <img src="/images/large.webp" alt="large" className="w-full" />
           </picture>
 
-          <div className="absolute w-full h-full flex flex-col justify-center items-center">
+          <div className="absolute flex h-full w-full flex-col items-center justify-center">
             <div className="md:mt-[-54px]">
-              <p className="bg-white text-4xl md:text-6xl mx-auto tracking-wider w-fit px-2 font-bold text-black">
+              <p className="mx-auto w-fit bg-white px-2 text-4xl font-bold tracking-wider text-black md:text-6xl">
                 This is ASOS
               </p>
-              <p className="bg-white text-lg tracking-wider px-2 text-black w-fit mx-auto">
+              <p className="mx-auto w-fit bg-white px-2 text-lg tracking-wider text-black">
                 ASOS DESIGN and 850+ brands
               </p>
 
-              <div className="flex flex-col md:flex-row mt-8 mx-auto w-fit">
+              <div className="mx-auto mt-8 flex w-fit flex-col md:flex-row">
                 <Link
                   href="/women"
-                  className="flex items-center justify-center text-sm md:text-base font-bold w-44 h-[42px] text-black bg-white hover:bg-black hover:text-white transition-all md:mr-6"
+                  className="flex h-[42px] w-44 items-center justify-center bg-white text-sm font-bold text-black transition-all hover:bg-black hover:text-white md:mr-6 md:text-base"
                 >
                   SHOP WOMEN
                 </Link>
                 <Link
                   href="/men"
-                  className="flex items-center justify-center text-sm md:text-base font-bold w-44 h-[42px] text-black bg-white hover:bg-black hover:text-white transition-all mt-5 md:mt-0"
+                  className="mt-5 flex h-[42px] w-44 items-center justify-center bg-white text-sm font-bold text-black transition-all hover:bg-black hover:text-white md:mt-0 md:text-base"
                 >
                   SHOP MEN
                 </Link>

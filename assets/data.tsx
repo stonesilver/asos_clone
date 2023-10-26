@@ -579,12 +579,15 @@ export const desktopMenuData: DesktopMenuProps[] = [
         li: [
           {
             text: "BLACK TRAINERS",
+            href: "/",
           },
           {
             text: "CHUNKY SHOES",
+            href: "/",
           },
           {
             text: "OCCASION SHOES",
+            href: "/",
           },
         ],
       },
@@ -820,7 +823,7 @@ export const desktopMenuData: DesktopMenuProps[] = [
     children: [
       {
         title: "SHOP BY PRODUCT",
-        type: "text_link",
+        type: "text_links",
         li: [
           { label: "View All", href: "/" },
           { label: "Bestsellers", href: "/" },
@@ -943,7 +946,7 @@ export const desktopMenuData: DesktopMenuProps[] = [
     children: [
       {
         title: "SHOP BY EDIT",
-        type: "text_link",
+        type: "text_links",
         li: [
           { label: "Gifts for Him", href: "/" },
           { label: "Gifts for Her", href: "/" },
@@ -1033,7 +1036,7 @@ export const desktopMenuData: DesktopMenuProps[] = [
     children: [
       {
         title: "TOP BRANDS",
-        type: "text_link",
+        type: "text_links",
         li: [
           { label: "A-Z of brands", href: "/" },
           { label: "adidas", href: "/" },
@@ -1138,7 +1141,7 @@ export const desktopMenuData: DesktopMenuProps[] = [
     children: [
       {
         title: "SHOP BY PRODUCT",
-        type: "text_link",
+        type: "text_links",
         li: [
           { label: "View all", href: "/" },
           { label: "New in", href: "/" },
@@ -1152,7 +1155,7 @@ export const desktopMenuData: DesktopMenuProps[] = [
       },
       {
         title: "",
-        type: "text_link",
+        type: "text_links",
         li: [
           { label: "Shirts", href: "/" },
           { label: "Shorts", href: "/" },
@@ -1255,7 +1258,7 @@ export const desktopMenuData: DesktopMenuProps[] = [
     children: [
       {
         title: "SHOP BY PRODUCT",
-        type: "text_link",
+        type: "text_links",
         li: [
           { label: "View all", href: "/" },
           { label: "New in: Clothing", href: "/" },
@@ -1273,7 +1276,7 @@ export const desktopMenuData: DesktopMenuProps[] = [
       },
       {
         title: "",
-        type: "text_link",
+        type: "text_links",
         li: [
           { label: "Jumpers & Cardigans", href: "/" },
           { label: "Loungewear", href: "/" },
@@ -1291,7 +1294,7 @@ export const desktopMenuData: DesktopMenuProps[] = [
       },
       {
         title: "SHOP BY BRAND",
-        type: "text_link",
+        type: "text_links",
         li: [
           { label: " adidas", href: "/" },
           { label: "Bolongaro Trevor", href: "/" },
