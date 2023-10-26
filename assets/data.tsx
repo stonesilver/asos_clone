@@ -939,22 +939,92 @@ export const desktopMenuData: DesktopMenuProps[] = [
     ],
   },
   {
-    title: "Topman",
+    title: "Gifting",
     children: [
       {
-        title: "",
-        type: "",
-        li: "",
+        title: "SHOP BY EDIT",
+        type: "text_link",
+        li: [
+          { label: "Gifts for Him", href: "/" },
+          { label: "Gifts for Her", href: "/" },
+          { label: "Face + Body", href: "/" },
+          { label: "Advent Calendar", href: "/" },
+          { label: "Pyjamas", href: "/" },
+          { label: "Underwear", href: "/" },
+          { label: "Fragrances", href: "/" },
+          { label: "Stocking Fillers", href: "/" },
+          { label: "Slippers", href: "/" },
+          { label: "T-Shirts", href: "/" },
+          { label: "Bestselling Gifts", href: "/" },
+        ],
       },
-    ],
-  },
-  {
-    title: "Face + Body",
-    children: [
+      {
+        title: "SHOP BY PRICE POINT",
+        type: "big_avatar",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Luxury Gifts",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Secret Santa",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Stocking Fillers",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Gift Vouchers",
+            href: "/",
+          },
+        ],
+      },
       {
         title: "",
-        type: "",
-        li: "",
+        type: "big_thumbnail",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "",
+            href: "/",
+          },
+        ],
+      },
+      {
+        title: "",
+        type: "big_thumbnail",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "",
+            href: "/",
+          },
+        ],
       },
     ],
   },
@@ -962,19 +1032,168 @@ export const desktopMenuData: DesktopMenuProps[] = [
     title: "Brands",
     children: [
       {
-        title: "",
-        type: "",
-        li: "",
+        title: "TOP BRANDS",
+        type: "text_link",
+        li: [
+          { label: "A-Z of brands", href: "/" },
+          { label: "adidas", href: "/" },
+          { label: "Calvin Klein", href: "/" },
+          { label: "Carhartt WIP", href: "/" },
+          { label: "New Balance", href: "/" },
+          { label: "New Era", href: "/" },
+          { label: "On running", href: "/" },
+          { label: "Polo Ralph Lauren", href: "/" },
+          { label: "Puma", href: "/" },
+          { label: "The North Face", href: "/" },
+          { label: "Jack & Jones", href: "/" },
+        ],
+      },
+      {
+        title: "ASOS BRANDS",
+        type: "small_avatar",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "View All",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "ASOS DESIGN",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "ASOS 4505",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Topman",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "COLLUSION",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Reclaimed Vintage",
+            href: "/",
+          },
+        ],
+      },
+      {
+        title: "DISCOVER BRANDS",
+        type: "small_avatar",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "New In",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Outdoors",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Trainers",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Emerging Brands",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "Designer Brands",
+            href: "/",
+          },
+        ],
+      },
+      {
+        title: "FEATURED",
+        type: "big_thumbnail",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "PLUS SIZE BRANDS",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "ASOS BRANDS",
+            href: "/",
+          },
+        ],
       },
     ],
   },
   {
-    title: "Outlet",
+    title: "Topman",
     children: [
       {
+        title: "SHOP BY PRODUCT",
+        type: "text_link",
+        li: [
+          { label: "View all", href: "/" },
+          { label: "New in", href: "/" },
+          { label: "Hoodies & Sweats", href: "/" },
+          { label: "Jackets & Coats", href: "/" },
+          { label: "Jeans", href: "/" },
+          { label: "Joggers", href: "/" },
+          { label: "Jumpers & Cardigans", href: "/" },
+          { label: "Multipacks", href: "/" },
+        ],
+      },
+      {
         title: "",
-        type: "",
-        li: "",
+        type: "text_link",
+        li: [
+          { label: "Shirts", href: "/" },
+          { label: "Shorts", href: "/" },
+          { label: "Suits & Tailoring", href: "/" },
+          { label: "Swimwear", href: "/" },
+          { label: "T-Shirts & Vests", href: "/" },
+          { label: "Trousers & Chinos", href: "/" },
+          { label: "Underwear & Loungewear", href: "/" },
+        ],
+      },
+      {
+        title: "",
+        type: "big_thumbnail",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "DISCOVER TOPMAN",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "KNITWEAR",
+            href: "/",
+          },
+        ],
+      },
+      {
+        title: "",
+        type: "big_thumbnail",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "JACKETS & COATS",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "TROUSERS",
+            href: "/",
+          },
+        ],
       },
     ],
   },
@@ -983,8 +1202,130 @@ export const desktopMenuData: DesktopMenuProps[] = [
     children: [
       {
         title: "",
-        type: "",
-        li: "",
+        type: "big_thumbnail_desc",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "EXPLORE ASOS MARKETPLACE",
+            desc: "Vintage boutiques and independent brands",
+            href: "/",
+          },
+        ],
+      },
+      {
+        title: "",
+        type: "big_thumbnail_desc",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "T-SHIRTS",
+            desc: "Vintage, branded & one-of-a-kind",
+            href: "/",
+          },
+        ],
+      },
+      {
+        title: "",
+        type: "big_thumbnail_desc",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "TROUSERS & SHOES",
+            desc: "Level-up your lower half in these styles",
+            href: "/",
+          },
+        ],
+      },
+      {
+        title: "",
+        type: "big_thumbnail_desc",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "JACKETS",
+            desc: "Vintage & new layers, incoming",
+            href: "/",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Outlet",
+    children: [
+      {
+        title: "SHOP BY PRODUCT",
+        type: "text_link",
+        li: [
+          { label: "View all", href: "/" },
+          { label: "New in: Clothing", href: "/" },
+          { label: "New in: Shoes & Accessories", href: "/" },
+          { label: "Accessories", href: "/" },
+          { label: "Activewear", href: "/" },
+          { label: "Bags", href: "/" },
+          { label: "Designer Brands", href: "/" },
+          { label: "Gifts", href: "/" },
+          { label: "Hoodies & Sweatshirts", href: "/" },
+          { label: "Jackets & Coats", href: "/" },
+          { label: "Jeans", href: "/" },
+          { label: "Jewellery & Watches", href: "/" },
+        ],
+      },
+      {
+        title: "",
+        type: "text_link",
+        li: [
+          { label: "Jumpers & Cardigans", href: "/" },
+          { label: "Loungewear", href: "/" },
+          { label: "Shirts", href: "/" },
+          { label: "Shoes & Trainers", href: "/" },
+          { label: "Shorts", href: "/" },
+          { label: "Suits & Tailoring", href: "/" },
+          { label: "Sunglasses", href: "/" },
+          { label: "Swimwear", href: "/" },
+          { label: "T-Shirts & Vests", href: "/" },
+          { label: "Tracksuits", href: "/" },
+          { label: "Trousers & Chinos", href: "/" },
+          { label: "Underwear & Socks", href: "/" },
+        ],
+      },
+      {
+        title: "SHOP BY BRAND",
+        type: "text_link",
+        li: [
+          { label: " adidas", href: "/" },
+          { label: "Bolongaro Trevor", href: "/" },
+          { label: "BOSS", href: "/" },
+          { label: "Brave Soul", href: "/" },
+          { label: "Calvin Klein", href: "/" },
+          { label: "French Connection", href: "/" },
+          { label: "Jack & Jones", href: "/" },
+          { label: "Puma", href: "/" },
+          { label: "Tommy Hilfiger", href: "/" },
+          { label: "Vans", href: "/" },
+          { label: "A-Z of brands", href: "/" },
+        ],
+      },
+      {
+        title: "",
+        type: "big_thumbnail",
+        li: [
+          {
+            avatar: "/images/nav-1.webp",
+            label: "FURTHER REDUCTIONS: UP TO 70% OFF",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "AUTUMN EDIT",
+            href: "/",
+          },
+          {
+            avatar: "/images/nav-1.webp",
+            label: "BEST OF OUTLETS",
+            href: "/",
+          },
+        ],
       },
     ],
   },

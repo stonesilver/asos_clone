@@ -119,7 +119,7 @@ const DesktopMenu: React.FC = () => {
 
               <div className=" px-4">
                 <ul className="space-y-3">
-                  <li className="big_thumbnail h-32 max-w-[289px] flex-1 border p-[2px] hover:border-blue-500">
+                  <li className="big_thumbnail relative flex h-32 max-w-[289px] items-center border p-[2px] hover:border-blue-500">
                     <Link
                       href="/"
                       className="relative block h-full w-full after:absolute after:top-0 after:h-full after:w-full after:bg-[linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8))] after:content-['']"
@@ -131,15 +131,41 @@ const DesktopMenu: React.FC = () => {
                         sizes="auto"
                       />
                     </Link>
+
+                    <p className="text absolute left-4 text-base font-semibold text-black sm:text-lg">
+                      T-SHIRTS
+                    </p>
                   </li>
 
-                  <li className="big_thumbnail_text h-28 max-w-[289px] flex-1 border p-[2px] hover:border-blue-500">
+                  {/* <li className="big_thumbnail_text h-28 max-w-[289px]  border p-[2px] hover:border-blue-500">
                     <Link
                       href="/"
                       className="relative flex h-full w-full items-center bg-gray-200 text-base font-semibold text-black after:absolute after:top-0 after:h-full after:w-full after:bg-[linear-gradient(180deg,hsla(0,0%,100%,0),hsla(0,0%,97.3%,.8))] after:content-['']"
                     >
                       <p className="px-2">BLACK TRAINERS</p>
                     </Link>
+                  </li> */}
+
+                  <li className="big_thumbnail_desc max-w-[289px] bg-white p-[2px] shadow-xl hover:border-blue-500">
+                    <Link
+                      href="/"
+                      className="relative flex h-32 w-full items-end"
+                    >
+                      <Image
+                        src="/images/nyx.webp"
+                        alt="nyx"
+                        fill={true}
+                        sizes="auto"
+                      />
+
+                      <p className="text absolute left-4 bottom-4 text-base font-semibold text-white sm:text-lg">
+                        T-SHIRTS
+                      </p>
+                    </Link>
+
+                    <p className="my-3 px-4 text-base text-black">
+                      Vintage, branded & one-of-a-kind
+                    </p>
                   </li>
                 </ul>
               </div>
